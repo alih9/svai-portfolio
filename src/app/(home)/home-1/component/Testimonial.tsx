@@ -56,16 +56,31 @@ const Testimonial = () => {
                 <Image src={client4} alt="" className="h-7.5" />
                 <div>
                   <div className="flex gap-1.5">
-                    <IconifyIconClient icon="tabler:star-filled" className="text-yellow-400 text-xl" />
-                    <IconifyIconClient icon="tabler:star-filled" className="text-yellow-400 text-xl" />
-                    <IconifyIconClient icon="tabler:star-filled" className="text-yellow-400 text-xl" />
-                    <IconifyIconClient icon="tabler:star-filled" className="text-yellow-400 text-xl" />
-                    <IconifyIconClient icon="tabler:star-filled" className="text-yellow-400 text-xl" />
+                    <IconifyIconClient
+                      icon="tabler:star-filled"
+                      className="text-yellow-400 text-xl"
+                    />
+                    <IconifyIconClient
+                      icon="tabler:star-filled"
+                      className="text-yellow-400 text-xl"
+                    />
+                    <IconifyIconClient
+                      icon="tabler:star-filled"
+                      className="text-yellow-400 text-xl"
+                    />
+                    <IconifyIconClient
+                      icon="tabler:star-filled"
+                      className="text-yellow-400 text-xl"
+                    />
+                    <IconifyIconClient
+                      icon="tabler:star-filled"
+                      className="text-yellow-400 text-xl"
+                    />
                   </div>
 
                   <p className="lg:text-xl text-lg my-3.5">
-                    Landinger has revolutionized the way we operate. The automated reporting feature
-                    alone has saved us countless hours each month.
+                    Spark Verse AI has revolutionized the way we operate. The automated reporting
+                    feature alone has saved us countless hours each month.
                   </p>
 
                   <div className="review-meta-wrap">

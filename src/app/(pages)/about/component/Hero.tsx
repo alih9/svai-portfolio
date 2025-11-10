@@ -18,7 +18,7 @@ const Hero = () => {
                   Empower your business with next-generation solutions.{' '}
                 </h2>
                 <p className="lg:mb-10 mb-5">
-                  Welcome to Landinger, where innovation meets efficiency. Our cloud-based software
+                  Welcome to Spark Verse AI, where innovation meets efficiency. Our cloud-based software
                   solutions.{' '}
                 </p>
               </div>

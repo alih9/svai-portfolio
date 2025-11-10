@@ -8,7 +8,7 @@ import Team from './component/Team';
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'About | Landinger - Multipurpose Tailwind CSS Landing Page Template',
+  title: 'About | Spark Verse AI',
 };
 
 const Page = () => {

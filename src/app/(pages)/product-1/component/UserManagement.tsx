@@ -21,7 +21,7 @@ const UserManagement = () => {
                   User management and authentication{' '}
                 </h2>
                 <p className="text-base mb-2.5 text-white">
-                  Discover how Landinger can transform your business operations with our innovative
+                  Discover how Spark Verse AI can transform your business operations with our innovative
                   features.{' '}
                 </p>
               </div>

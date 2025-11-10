@@ -1,12 +1,11 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import React from 'react';
-import logo from '@/assets/images/logo/landinger.svg';
 import { currentYear } from '@/component/CurrentYear';
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
-    title: 'Update Password | Landinger - Multipurpose Tailwind CSS Landing Page Template',
+    title: 'Update Password | Spark Verse AI',
 };
 
 const Page = () => {
@@ -56,7 +55,22 @@ const Page = () => {
                     <div className="flex justify-between md:gap-5 md:flex-row gap-2.5 flex-col mt-7.5 items-center">
                         <Link href="/home-1">
                             {' '}
-                            <Image src={logo} alt="" className="h-9 w-38.75" />
+                            {/* Desktop/tablet — full wordmark */}
+                            <Image
+                                src="/Logos/PNG/FINAL LOGO-01.png"
+                                alt="Logo"
+                                width={100}
+                                height={36}
+                                className="hidden sm:block h-9 w-auto"
+                            />
+                            {/* Mobile — short mark */}
+                            <Image
+                                src="/Logos/PNG/FINAL LOGO-02.png"
+                                alt="Logo"
+                                width={36}
+                                height={36}
+                                className="block sm:hidden h-9 w-auto"
+                            />
                         </Link>
                         <div className="text-sm">
                             {currentYear}. Crafted with ❤️{' '}

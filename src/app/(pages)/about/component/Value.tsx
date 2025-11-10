@@ -18,7 +18,7 @@ const Value = () => {
               <div>
                 <h2 className="mb-2.5 md:text-4xl text-2.6xl text-white">Our core values</h2>
                 <p className="mb-2.5 text-white">
-                  Welcome to Landinger, where innovation meets efficiency. Our cloud-based software
+                  Welcome to Spark Verse AI, where innovation meets efficiency. Our cloud-based software
                   solutions.
                 </p>
               </div>
@@ -61,7 +61,7 @@ const Value = () => {
                     Ready to revolutionize your business?{' '}
                   </h2>
                   <p className="mb-2.5">
-                    Take the first step towards unlocking your full potential with Landinger.{' '}
+                    Take the first step towards unlocking your full potential with Spark Verse AI.{' '}
                   </p>
                 </div>
                 <Link

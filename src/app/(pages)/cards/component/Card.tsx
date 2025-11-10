@@ -12,9 +12,11 @@ const Card = () => {
             data-aos-duration={500}
             data-aos-easing="ease-in-out"
           >
-            <h2 className="mb-2.5 lg:text-5.5xl md:text-4.6xl text-3.4xl">Why choose Landinger?</h2>
+            <h2 className="mb-2.5 lg:text-5.5xl md:text-4.6xl text-3.4xl">
+              Why choose Spark Verse AI?
+            </h2>
             <p className="text-base mb-2.5">
-              Discover how Landinger can transform your business operations with our innovative
+              Discover how Spark Verse AI can transform your business operations with our innovative
               features.{' '}
             </p>
           </div>
@@ -46,7 +48,10 @@ const Card = () => {
               <div className="bg-body-bg lg:p-10 md:p-5 p-5 rounded-2xl">
                 <div className="flex lg:gap-20 md:gap-10 md:flex-col flex-col  gap-5">
                   <div className="size-17.5  bg-dark rounded-full inline-flex items-center justify-center">
-                    <IconifyIconClient icon="solar:lightbulb-outline" className="size-7 text-primary" />
+                    <IconifyIconClient
+                      icon="solar:lightbulb-outline"
+                      className="size-7 text-primary"
+                    />
                   </div>
                   <div>
                     <h3 className="text-1.5xl mb-2.5">Seamless Integrations </h3>

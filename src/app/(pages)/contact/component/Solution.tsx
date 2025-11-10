@@ -1,5 +1,3 @@
-
-
 import Link from 'next/link';
 import React from 'react';
 import IconifyIconClient from '@/component/IconifyIconClient';
@@ -30,7 +28,7 @@ const contactData: ContactCard[] = [
   },
   {
     icon: 'solar:chart-square-linear',
-    title: 'Discover Landinger tutorials',
+    title: 'Discover Spark Verse AI tutorials',
     description: 'Watch and learn from market experts how to utilize our product effectively.',
     linkLabel: 'Watch tutorials',
     linkUrl: '#',

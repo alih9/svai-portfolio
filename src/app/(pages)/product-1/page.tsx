@@ -10,21 +10,18 @@ import CTA from './component/CTA';
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Product 1 | Landinger - Multipurpose Tailwind CSS Landing Page Template',
+  title: 'Product 1 | Spark Verse AI',
 };
-
 
 const Page = () => {
   return (
     <>
-      
       <Hero />
       <Feature />
       <UserManagement />
       <Templates />
       <Faq />
       <CTA />
-      
     </>
   );
 };

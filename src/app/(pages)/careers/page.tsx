@@ -1,4 +1,3 @@
-
 import React from 'react';
 import Hero from './component/Hero';
 import Testimonial from './component/Testimonial';
@@ -7,17 +6,15 @@ import Position from './component/Position';
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Careers | Landinger - Multipurpose Tailwind CSS Landing Page Template',
+  title: 'Careers | Spark Verse AI',
 };
 
 const Page = () => {
   return (
     <>
-      
       <Hero />
       <Testimonial />
       <Position />
-      
     </>
   );
 };

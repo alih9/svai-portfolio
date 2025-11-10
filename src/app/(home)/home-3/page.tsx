@@ -1,4 +1,3 @@
-
 import React from 'react';
 import Hero from './component/Hero';
 import Team from './component/Team';
@@ -12,13 +11,12 @@ import CTA from './component/CTA';
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Home 3 | Landinger - Multipurpose Tailwind CSS Landing Page Template',
+  title: 'Home 3 | Spark Verse AI',
 };
 
 const Page = () => {
   return (
     <>
-      
       <Hero />
       <Highlight />
       <Team />
@@ -27,7 +25,6 @@ const Page = () => {
       <Feature />
       <Pricing />
       <CTA />
-      
     </>
   );
 };

@@ -5,20 +5,20 @@ import 'aos/dist/aos.css';
 import { usePathname } from 'next/navigation';
 
 const AppProvidersWrapper = () => {
-    const pathname = usePathname()
-    useEffect(() => {
-        Aos.init({ once: true });
+  const pathname = usePathname();
+  useEffect(() => {
+    Aos.init({ once: true });
 
-        import("preline/dist/preline");
-    }, []);
+    import('preline/dist/preline');
+  }, []);
 
-    useEffect(() => {
-        setTimeout(() => {
-            if (window.HSStaticMethods) window.HSStaticMethods.autoInit()
-        }, 400)
-    }, [pathname])
+  useEffect(() => {
+    setTimeout(() => {
+      if (window.HSStaticMethods) window.HSStaticMethods.autoInit();
+    }, 400);
+  }, [pathname]);
 
-    return null;
+  return null;
 };
 
 export default AppProvidersWrapper;

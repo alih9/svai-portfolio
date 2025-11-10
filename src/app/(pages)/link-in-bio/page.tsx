@@ -1,19 +1,16 @@
-
 import React from 'react';
 import Cta from './component/Cta';
 
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Link in Bio | Landinger - Multipurpose Tailwind CSS Landing Page Template',
+  title: 'Link in Bio | Spark Verse AI',
 };
 
 const Page = () => {
   return (
     <>
-      
       <Cta />
-      
     </>
   );
 };

@@ -1,8 +1,5 @@
-
-
 import Link from 'next/link';
 import React from 'react';
-import Logo from '@/assets/images/logo/landinger-light.svg';
 import IconifyIconClient from '@/component/IconifyIconClient';
 import { currentYear } from '@/component/CurrentYear';
 import Image from 'next/image';
@@ -15,18 +12,48 @@ const Footer = () => {
           <div className="grid md:grid-cols-2 md:gap-12.5 lg:grid-cols-8 lg:gap-5 gap-10">
             <div className="lg:col-span-3">
               <Link href="/home-1">
-                <Image src={Logo} alt="" className="h-11" />
+                {/* Desktop/tablet — full wordmark */}
+                <Image
+                  src="/Logos/PNG/FINAL LOGO-01.png"
+                  alt="Logo"
+                  width={120}
+                  height={44}
+                  className="hidden sm:block h-11 w-auto"
+                />
+                {/* Mobile — short mark */}
+                <Image
+                  src="/Logos/PNG/FINAL LOGO-02.png"
+                  alt="Logo"
+                  width={40}
+                  height={40}
+                  className="block sm:hidden h-11 w-auto"
+                />
               </Link>
               <p className="mt-2.5 text-white">Trusted solutions for your growing business</p>
               <div className="mt-10 flex items-center gap-3.5 md:mt-15">
                 <h2 className="md:text-5.5xl text-4xl text-white">4.8</h2>
                 <div>
                   <div className="mb-1 flex gap-1.5">
-                    <IconifyIconClient icon="tabler:star-filled" className="text-xl text-orange-300" />
-                    <IconifyIconClient icon="tabler:star-filled" className="text-xl text-orange-300" />
-                    <IconifyIconClient icon="tabler:star-filled" className="text-xl text-orange-300" />
-                    <IconifyIconClient icon="tabler:star-filled" className="text-xl text-orange-300" />
-                    <IconifyIconClient icon="tabler:star-filled" className="text-xl text-orange-300" />
+                    <IconifyIconClient
+                      icon="tabler:star-filled"
+                      className="text-xl text-orange-300"
+                    />
+                    <IconifyIconClient
+                      icon="tabler:star-filled"
+                      className="text-xl text-orange-300"
+                    />
+                    <IconifyIconClient
+                      icon="tabler:star-filled"
+                      className="text-xl text-orange-300"
+                    />
+                    <IconifyIconClient
+                      icon="tabler:star-filled"
+                      className="text-xl text-orange-300"
+                    />
+                    <IconifyIconClient
+                      icon="tabler:star-filled"
+                      className="text-xl text-orange-300"
+                    />
                   </div>
                   <div className="text-white">Best rated company</div>
                 </div>
@@ -189,7 +216,7 @@ const Footer = () => {
             <div className="text-sm text-white">
               © {currentYear}{' '}
               <Link href="" className="underline">
-                Landinger.
+                Spark Verse AI.
               </Link>
             </div>
             <div className="text-sm text-white">

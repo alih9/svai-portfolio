@@ -1,19 +1,16 @@
-
 import React from 'react';
 import Request from './component/Request';
 
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Request Demo | Landinger - Multipurpose Tailwind CSS Landing Page Template',
+  title: 'Request Demo | Spark Verse AI',
 };
 
 const Page = () => {
   return (
     <>
-      
       <Request />
-      
     </>
   );
 };

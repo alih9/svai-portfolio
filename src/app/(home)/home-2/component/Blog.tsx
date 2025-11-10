@@ -1,4 +1,3 @@
-
 import Image, { StaticImageData } from 'next/image';
 import Link from 'next/link';
 import React from 'react';
@@ -46,7 +45,7 @@ const Blog = () => {
         >
           <h2 className="mb-2.5 lg:text-5.5xl text-3.4xl">Our latest articles</h2>
           <p className="text-base mb-2.5">
-            Real stories of success and satisfaction from businesses using Landinger.
+            Real stories of success and satisfaction from businesses using Spark Verse AI.
           </p>
         </div>
 

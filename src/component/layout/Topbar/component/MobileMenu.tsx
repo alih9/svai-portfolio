@@ -5,7 +5,6 @@ import IconifyIconClient from '@/component/IconifyIconClient';
 import Link from 'next/link';
 import { mobileMenuData } from '@/component/layout/Topbar/data/mobileMenuData';
 import Image from 'next/image';
-import logo from '@/assets/images/logo/landinger.svg';
 
 interface MobileMenuProps {
   isOpen: boolean;
@@ -36,7 +35,13 @@ const MobileMenu: React.FC<MobileMenuProps> = ({ isOpen, onClose }) => {
       >
         <div className="h-16 flex items-center justify-between px-4 border-b border-neutral-200 sticky top-0">
           <Link href="/">
-            <Image src={logo} alt="logo" className="h-8" />
+            <Image
+              src="/Logos/PNG/FINAL LOGO-02.png"
+              alt="logo"
+              width={32}
+              height={32}
+              className="h-8 w-auto"
+            />
           </Link>
           <button
             type="button"
@@ -73,7 +78,9 @@ const MobileMenu: React.FC<MobileMenuProps> = ({ isOpen, onClose }) => {
                       className="flex items-center gap-2 p-2 rounded-lg hover:bg-gray-100"
                       onClick={onClose}
                     >
-                      {child.icon && <IconifyIconClient icon={child.icon} className="text-black size-5" />}
+                      {child.icon && (
+                        <IconifyIconClient icon={child.icon} className="text-black size-5" />
+                      )}
                       <div>
                         <div className="text-black font-medium">{child.label}</div>
                         {child.description && (

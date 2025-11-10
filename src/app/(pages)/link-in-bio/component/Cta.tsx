@@ -16,7 +16,7 @@ const Cta = () => {
               <div className="md:size-25 size-22.5 md:mb-5 mb-2.5 bg-primary rounded-full inline-flex items-center justify-center">
                 <Image src={Logo} alt="" className="md:size-10 size-12.5" />
               </div>
-              <h1 className="md:text-6xl text-4xl">Landinger </h1>
+              <h1 className="md:text-6xl text-4xl">Spark Verse AI</h1>
               <p className="mb-2.5">
                 A brief overview of your professional background and experience, highlighting key
                 accomplishments and skills.{' '}

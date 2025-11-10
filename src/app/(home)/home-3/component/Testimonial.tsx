@@ -27,7 +27,7 @@ const sliderData: sliderType[] = [
   },
   {
     image: Team2,
-    des: `Landinger offers everything we need in one place. The security features give us peace of mind, knowing our data is protected. The dedicated account manager for the enterprise plan ensures we get personalized support tailored to our needs. It's been a fantastic investment for our company. `,
+    des: `Spark Verse AI offers everything we need in one place. The security features give us peace of mind, knowing our data is protected. The dedicated account manager for the enterprise plan ensures we get personalized support tailored to our needs. It's been a fantastic investment for our company. `,
     title: 'Sarah Lee',
     role: 'Operations Manager at Global Solutions',
   },

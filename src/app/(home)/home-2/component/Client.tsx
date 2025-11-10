@@ -16,7 +16,7 @@ export interface ClientItem {
 export const clientData: ClientItem[] = [
   {
     image: Client4,
-    description: 'Leveraging Landinger for streamlined project management.',
+    description: 'Leveraging Spark Verse AI for streamlined project management.',
   },
   {
     image: Client3,
@@ -73,7 +73,7 @@ const Client = () => {
             data-aos-duration={600}
             data-aos-easing="ease-in-out"
           >
-            <h3 className="mb-2.5 text-1.5xl text-xl">Save an average of 5% with Landinger</h3>
+            <h3 className="mb-2.5 text-1.5xl text-xl">Save an average of 5% with Spark Verse AI</h3>
             <div>
               <Link
                 href="product-2"

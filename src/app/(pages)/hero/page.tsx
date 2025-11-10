@@ -1,4 +1,3 @@
-
 import React from 'react';
 import Hero from './component/Hero';
 import Hero1 from './component/Hero1';
@@ -10,20 +9,18 @@ import Hero5 from './component/Hero5';
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Hero | Landinger - Multipurpose Tailwind CSS Landing Page Template',
+  title: 'Hero | Spark Verse AI',
 };
 
 const Page = () => {
   return (
     <>
-      
       <Hero />
       <Hero1 />
       <Hero2 />
       <Hero3 />
       <Hero4 />
       <Hero5 />
-      
     </>
   );
 };

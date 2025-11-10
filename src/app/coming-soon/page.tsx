@@ -3,7 +3,7 @@ import ComingSoon from './ComingSoon';
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Coming Soon | Landinger - Multipurpose Tailwind CSS Landing Page Template',
+  title: 'Coming Soon | Spark Verse AI',
 };
 
 const Page = () => {

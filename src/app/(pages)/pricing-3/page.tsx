@@ -1,4 +1,3 @@
-
 import React from 'react';
 import Pricing from './component/Pricing';
 import Testimonial from './component/Testimonial';
@@ -6,16 +5,14 @@ import Testimonial from './component/Testimonial';
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Pricing 3 | Landinger - Multipurpose Tailwind CSS Landing Page Template',
+  title: 'Pricing 3 | Spark Verse AI',
 };
 
 const Page = () => {
   return (
     <>
-      
       <Pricing />
       <Testimonial />
-      
     </>
   );
 };
