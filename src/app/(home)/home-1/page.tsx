@@ -11,7 +11,7 @@ import CTA from './component/CTA';
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Home | Spark Verse AI',
+  title: 'Home | SparkVerseAI',
 };
 
 const Page = () => {

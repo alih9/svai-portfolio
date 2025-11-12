@@ -8,7 +8,7 @@ import Faq from './component/Faq';
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Product 3 | Spark Verse AI',
+  title: 'Product 3 | SparkVerseAI',
 };
 
 const Page = () => {

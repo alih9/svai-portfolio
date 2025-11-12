@@ -1,5 +1,3 @@
-
-
 import React from 'react';
 import IconifyIconClient from '@/component/IconifyIconClient';
 
@@ -43,9 +41,11 @@ const Feature3 = () => {
             data-aos-duration={500}
             data-aos-easing="ease-in-out"
           >
-            <h2 className="mb-2.5 lg:text-5.5xl md:text-4.6xl text-3.4xl">Why choose Spark Verse AI</h2>
+            <h2 className="mb-2.5 lg:text-5.5xl md:text-4.6xl text-3.4xl">
+              Why choose SparkVerseAI
+            </h2>
             <p className="text-base mb-2.5">
-              Discover how Spark Verse AI can transform your business operations with our innovative
+              Discover how SparkVerseAI can transform your business operations with our innovative
               features.{' '}
             </p>
           </div>

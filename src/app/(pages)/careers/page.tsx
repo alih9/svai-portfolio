@@ -6,7 +6,7 @@ import Position from './component/Position';
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Careers | Spark Verse AI',
+  title: 'Careers | SparkVerseAI',
 };
 
 const Page = () => {

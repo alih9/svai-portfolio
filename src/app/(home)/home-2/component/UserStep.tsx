@@ -14,7 +14,7 @@ export const userStepsData: StepItem[] = [
     number: '01',
     title: 'Sign up',
     description:
-      'Create your Spark Verse AI account by providing basic information. It only takes a few minutes to get started.',
+      'Create your SparkVerseAI account by providing basic information. It only takes a few minutes to get started.',
   },
   {
     number: '02',
@@ -25,13 +25,13 @@ export const userStepsData: StepItem[] = [
     number: '03',
     title: 'Customize your workspace',
     description:
-      'Tailor Spark Verse AI to your business needs. Set up your workflows, integrate your favorite tools, and configure your dashboard.',
+      'Tailor SparkVerseAI to your business needs. Set up your workflows, integrate your favorite tools, and configure your dashboard.',
   },
   {
     number: '04',
     title: 'Launch and optimize',
     description:
-      'Start using Spark Verse AI to manage your projects, track your analytics, and collaborate with your team.',
+      'Start using SparkVerseAI to manage your projects, track your analytics, and collaborate with your team.',
   },
 ];
 
@@ -54,7 +54,7 @@ const UserStep = () => {
                 </div>
               </div>
               <div className="flex mt-7.5 gap-2.5 md:flex-row flex-col">
-                <p className="text-white">Ready to experience the full power of Spark Verse AI?</p>
+                <p className="text-white">Ready to experience the full power of SparkVerseAI?</p>
                 <Link href="/pricing-2" className="inline-flex text-white underline">
                   <div>Learn more</div>
                 </Link>

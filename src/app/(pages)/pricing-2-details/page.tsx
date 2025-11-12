@@ -5,7 +5,7 @@ import Review from './component/Review';
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Pricing Details | Spark Verse AI',
+  title: 'Pricing Details | SparkVerseAI',
 };
 
 const Page = () => {

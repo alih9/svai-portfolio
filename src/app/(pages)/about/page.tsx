@@ -1,4 +1,3 @@
-
 import React from 'react';
 import Hero from './component/Hero';
 import Value from './component/Value';
@@ -8,18 +7,16 @@ import Team from './component/Team';
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'About | Spark Verse AI',
+  title: 'About | SparkVerseAI',
 };
 
 const Page = () => {
   return (
     <>
-      
       <Hero />
       <Value />
       <Vision />
       <Team />
-      
     </>
   );
 };

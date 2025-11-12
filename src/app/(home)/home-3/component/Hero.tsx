@@ -17,7 +17,7 @@ const Hero = () => {
           >
             <div className="lg:col-span-3">
               <h1 className="lg:text-6xl md:text-5.5xl mb-2.5 text-4xl">
-                Empower your business with Spark Verse AI
+                Empower your business with SparkVerseAI
               </h1>
               <p className="mb-2.5">
                 Revolutionize your operations with our comprehensive, intuitive SaaS platform.

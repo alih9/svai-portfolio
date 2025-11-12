@@ -7,7 +7,7 @@ import Card3 from './component/Card3';
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Cards | Spark Verse AI',
+  title: 'Cards | SparkVerseAI',
 };
 
 const Page = () => {

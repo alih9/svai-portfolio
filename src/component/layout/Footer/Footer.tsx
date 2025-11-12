@@ -216,7 +216,7 @@ const Footer = () => {
             <div className="text-sm text-white">
               © {currentYear}{' '}
               <Link href="" className="underline">
-                Spark Verse AI.
+                SparkVerseAI.
               </Link>
             </div>
             <div className="text-sm text-white">

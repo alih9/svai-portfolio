@@ -3,7 +3,7 @@ import React from 'react';
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Password Protected | Spark Verse AI',
+  title: 'Password Protected | SparkVerseAI',
 };
 
 const Page = () => {

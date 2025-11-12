@@ -9,7 +9,7 @@ import Hero5 from './component/Hero5';
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Hero | Spark Verse AI',
+  title: 'Hero | SparkVerseAI',
 };
 
 const Page = () => {

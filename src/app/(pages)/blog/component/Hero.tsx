@@ -14,7 +14,7 @@ const Hero = () => {
           >
             <h1 className="lg:text-6xl md:text-5.5xl text-4xl mb-2.5">Our latest articles </h1>
             <p className="mb-2.5">
-              Real stories of success and satisfaction from businesses using Spark Verse AI.{' '}
+              Real stories of success and satisfaction from businesses using SparkVerseAI.{' '}
             </p>
           </div>
         </div>

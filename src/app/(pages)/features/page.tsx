@@ -10,7 +10,7 @@ import Highlight from './component/Highlight';
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Features | Spark Verse AI',
+  title: 'Features | SparkVerseAI',
 };
 
 const Page = () => {

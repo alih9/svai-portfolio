@@ -5,7 +5,7 @@ import Blog from './component/Blog';
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Blog Details | Spark Verse AI',
+  title: 'Blog Details | SparkVerseAI',
 };
 
 const Page = () => {

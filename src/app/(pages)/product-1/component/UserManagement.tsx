@@ -21,8 +21,8 @@ const UserManagement = () => {
                   User management and authentication{' '}
                 </h2>
                 <p className="text-base mb-2.5 text-white">
-                  Discover how Spark Verse AI can transform your business operations with our innovative
-                  features.{' '}
+                  Discover how SparkVerseAI can transform your business operations with our
+                  innovative features.{' '}
                 </p>
               </div>
               <div className="flex gap-5 md:flex-row flex-col">

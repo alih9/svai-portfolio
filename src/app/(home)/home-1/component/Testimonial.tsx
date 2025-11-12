@@ -79,7 +79,7 @@ const Testimonial = () => {
                   </div>
 
                   <p className="lg:text-xl text-lg my-3.5">
-                    Spark Verse AI has revolutionized the way we operate. The automated reporting
+                    SparkVerseAI has revolutionized the way we operate. The automated reporting
                     feature alone has saved us countless hours each month.
                   </p>
 

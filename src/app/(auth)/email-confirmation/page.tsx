@@ -5,7 +5,7 @@ import Image from 'next/image';
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Email Confirmation | Spark Verse AI',
+  title: 'Email Confirmation | SparkVerseAI',
 };
 
 const Page = () => {

@@ -10,8 +10,8 @@ import Newsletter from './component/Newsletter';
 import CTA from './component/CTA';
 
 export const metadata: Metadata = {
-  title: 'SVAI | Spark Verse AI',
-  description: 'Spark Verse AI — Smarter Search. Safer Data. Seamless Experience.',
+  title: 'SVAI | SparkVerseAI',
+  description: 'SparkVerseAI — Smarter Search. Safer Data. Seamless Experience.',
 };
 
 const Page = () => {

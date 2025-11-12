@@ -5,7 +5,7 @@ import Solution from './component/Solution';
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Contact | Spark Verse AI',
+  title: 'Contact | SparkVerseAI',
 };
 
 const Page = () => {

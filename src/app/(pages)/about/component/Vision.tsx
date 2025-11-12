@@ -1,5 +1,3 @@
-
-
 import React from 'react';
 import about from '@/assets/images/about/12.png';
 import Image from 'next/image';
@@ -16,7 +14,7 @@ const Vision = () => {
             data-aos-duration={600}
             data-aos-easing="ease-in-out"
           >
-            Discover Spark Verse AI
+            Discover SparkVerseAI
           </h2>
           <div
             className="grid md:grid-cols-2 lg:gap-25 gap-5 mt-5 mb-10"
@@ -28,7 +26,7 @@ const Vision = () => {
             <div>
               <h3 className="md:text-1.5xl text-xl mb-2.5">Mission</h3>
               <p className="mb-2.5">
-                At Spark Verse AI, our mission is to empower businesses of all sizes to thrive in the
+                At SparkVerseAI, our mission is to empower businesses of all sizes to thrive in the
                 digital age by providing innovative, user-friendly software solutions.{' '}
               </p>
             </div>

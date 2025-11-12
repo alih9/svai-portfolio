@@ -18,14 +18,17 @@ const Value = () => {
               <div>
                 <h2 className="mb-2.5 md:text-4xl text-2.6xl text-white">Our core values</h2>
                 <p className="mb-2.5 text-white">
-                  Welcome to Spark Verse AI, where innovation meets efficiency. Our cloud-based software
-                  solutions.
+                  Welcome to SparkVerseAI, where innovation meets efficiency. Our cloud-based
+                  software solutions.
                 </p>
               </div>
               <div className="grid md:grid-cols-2 md:gap-5 gap-7.5 md:mt-20 md:mb-12.5 my-7.5">
                 <div>
                   <div className="size-12.5 md:mb-5 mb-2.5 bg-primary rounded-full inline-flex items-center justify-center">
-                    <IconifyIconClient icon="solar:chart-square-linear" className="size-6 text-black" />
+                    <IconifyIconClient
+                      icon="solar:chart-square-linear"
+                      className="size-6 text-black"
+                    />
                   </div>
                   <h3 className="text-white mb-2.5 md:text-1.5xl text-xl">Innovation </h3>
                   <p className="mb-2.5 text-white">
@@ -61,7 +64,8 @@ const Value = () => {
                     Ready to revolutionize your business?{' '}
                   </h2>
                   <p className="mb-2.5">
-                    Take the first step towards unlocking your full potential with Spark Verse AI.{' '}
+                    Take the first step towards unlocking your full potential with
+                    SparkVerseAI.{' '}
                   </p>
                 </div>
                 <Link

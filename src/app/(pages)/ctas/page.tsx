@@ -7,7 +7,7 @@ import Cta3 from './component/Cta3';
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'CTAs | Spark Verse AI',
+  title: 'CTAs | SparkVerseAI',
 };
 
 const Page = () => {

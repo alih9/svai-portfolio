@@ -4,7 +4,7 @@ import Request from './component/Request';
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Request Demo | Spark Verse AI',
+  title: 'Request Demo | SparkVerseAI',
 };
 
 const Page = () => {

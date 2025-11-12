@@ -18,8 +18,8 @@ const Hero = () => {
                   Empower your business with next-generation solutions.{' '}
                 </h2>
                 <p className="lg:mb-10 mb-5">
-                  Welcome to Spark Verse AI, where innovation meets efficiency. Our cloud-based software
-                  solutions.{' '}
+                  Welcome to SparkVerseAI, where innovation meets efficiency. Our cloud-based
+                  software solutions.{' '}
                 </p>
               </div>
               <div className="lg:pt-10 pt-5 flex gap-5 border-t border-neutral-200">
@@ -28,11 +28,26 @@ const Hero = () => {
                 </div>
                 <div>
                   <div className="flex gap-1.5 mb-1">
-                    <IconifyIconClient icon="tabler:star-filled" className="lg:size-5 text-yellow-400" />
-                    <IconifyIconClient icon="tabler:star-filled" className="lg:size-5 text-yellow-400" />
-                    <IconifyIconClient icon="tabler:star-filled" className="lg:size-5 text-yellow-400" />
-                    <IconifyIconClient icon="tabler:star-filled" className="lg:size-5 text-yellow-400" />
-                    <IconifyIconClient icon="tabler:star-half-filled" className="lg:size-5 text-yellow-400" />
+                    <IconifyIconClient
+                      icon="tabler:star-filled"
+                      className="lg:size-5 text-yellow-400"
+                    />
+                    <IconifyIconClient
+                      icon="tabler:star-filled"
+                      className="lg:size-5 text-yellow-400"
+                    />
+                    <IconifyIconClient
+                      icon="tabler:star-filled"
+                      className="lg:size-5 text-yellow-400"
+                    />
+                    <IconifyIconClient
+                      icon="tabler:star-filled"
+                      className="lg:size-5 text-yellow-400"
+                    />
+                    <IconifyIconClient
+                      icon="tabler:star-half-filled"
+                      className="lg:size-5 text-yellow-400"
+                    />
                   </div>
                   <p>Best rated company </p>
                 </div>

@@ -30,14 +30,14 @@ const Topbar = () => {
         <div className="container">
           <div className="flex items-center justify-between py-2.5 lg:py-4.5">
             <div className="text-lg font-bold">
-              <Link href="/home-1">
+              <Link href="/svai">
                 {/* Desktop/tablet — full wordmark */}
                 <Image
                   src="/Logos/PNG/FINAL LOGO-01.png"
                   alt="Logo"
                   width={100}
                   height={36}
-                  className="hidden sm:block h-8.5 lg:h-9 w-auto"
+                  className="hidden sm:block h-8.5 lg:h-14 w-auto"
                 />
                 {/* Mobile — short mark */}
                 <Image
@@ -51,18 +51,12 @@ const Topbar = () => {
             </div>
             <NavMenu />
             <div className="flex flex-row justify-center items-center md:gap-4 gap-2.5">
-              <div className="flex items-center">
-                <div className="text-black">Cart</div>
-                <div className="flex justify-center text-white items-center bg-black px-1.5 ms-2 text-1.1xl size-4.5 rounded-full">
-                  0
-                </div>
-              </div>
               <div className="md:flex hidden">
                 <Link
-                  href=""
+                  href="/request-a-demo"
                   className="bg-primary text-dark hover:text-primary hover:bg-dark rounded-2xl px-7.5 py-3.5 font-medium transition-all duration-300"
                 >
-                  Sign in
+                  Request a Demo
                 </Link>
               </div>
               <div className="flex lg:hidden">

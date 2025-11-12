@@ -1,5 +1,3 @@
-
-
 import React from 'react';
 import IconifyIconClient from '@/component/IconifyIconClient';
 import Link from 'next/link';
@@ -69,7 +67,7 @@ const Position = () => {
           >
             <h2 className="mb-2.5 lg:text-5.5xl md:text-4.6xl text-3.4xl">Open positions</h2>
             <p className="text-base mb-2.5">
-              Real stories of success and satisfaction from businesses using Spark Verse AI.
+              Real stories of success and satisfaction from businesses using SparkVerseAI.
             </p>
           </div>
 

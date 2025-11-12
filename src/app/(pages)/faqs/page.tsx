@@ -6,7 +6,7 @@ import Contact from './component/Contact';
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'FAQs | Spark Verse AI',
+  title: 'FAQs | SparkVerseAI',
 };
 
 const Page = () => {

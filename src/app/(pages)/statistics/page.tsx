@@ -7,7 +7,7 @@ import Statistics3 from './component/Statistics3';
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Statistics | Spark Verse AI',
+  title: 'Statistics | SparkVerseAI',
 };
 
 const Page = () => {

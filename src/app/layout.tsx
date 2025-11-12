@@ -12,11 +12,11 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: 'Spark Verse AI',
+  title: 'SparkVerseAI',
   description:
-    'Spark Verse AI — privacy-first semantic search and intelligent experiences for modern commerce.',
+    'SparkVerseAI — privacy-first semantic search and intelligent experiences for modern commerce.',
   keywords:
-    'Spark Verse AI, semantic search, ecommerce search, recommendations, personalization, analytics, privacy-first, hybrid deployments',
+    'SparkVerseAI, semantic search, ecommerce search, recommendations, personalization, analytics, privacy-first, hybrid deployments',
   icons: {
     icon: [
       { url: '/Logos/PNG/FINAL LOGO-02.png', type: 'image/png', sizes: '32x32' },

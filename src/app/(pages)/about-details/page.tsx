@@ -5,7 +5,7 @@ import TeamInfo from './component/TeamInfo';
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'About Details | Spark Verse AI',
+  title: 'About Details | SparkVerseAI',
 };
 
 const Page = () => {

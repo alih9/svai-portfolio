@@ -6,7 +6,7 @@ import IntegrationsList from './component/IntegrationsList';
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Integrations Details | Spark Verse AI',
+  title: 'Integrations Details | SparkVerseAI',
 };
 
 const Page = () => {
