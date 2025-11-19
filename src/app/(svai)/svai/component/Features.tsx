@@ -1,96 +1,107 @@
-import Image from 'next/image';
+'use client';
 import React from 'react';
-import about1 from '@/assets/images/about/1.png';
-import about2 from '@/assets/images/element/2.svg';
+import Image, { StaticImageData } from 'next/image';
 import Link from 'next/link';
 import IconifyIconClient from '@/component/IconifyIconClient';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { Navigation } from 'swiper/modules';
+import Tls from '@/assets/images/svai/tls.webp';
+import Fine from '@/assets/images/svai/fine-grained.jpg';
 
 const Features = () => {
+  type sliderType = {
+    image: StaticImageData;
+    des: string;
+    title: string;
+  };
+
+  const sliderData: sliderType[] = [
+    {
+      image: Fine,
+      des: `Give every user the right access—no more, no less. Fine‑grained roles and permissions help you lock down sensitive data and streamline approvals with full audit trails. Explore Access Controls →`,
+      title: 'Fine-Grained Access Control',
+    },
+    {
+      image: Tls,
+      des: `Protect data in transit and at rest with AES‑256 encryption and TLS 1.3. Modern ciphers, perfect forward secrecy and strict key management keep your information safe by default. See Encryption Standards →`,
+      title: 'AES-256 / TLS 1.3',
+    },
+    {
+      image: Fine,
+      des: `Stay compliant without slowing down. GDPR‑ready controls for consent, data residency, export, and erasure requests—plus DPA support when you need it. Review Compliance Features →`,
+      title: 'GDPR-ready ',
+    },
+    {
+      image: Fine,
+      des: `Deploy your way with SaaS or hybrid—keep sensitive data private while leveraging the cloud for scale and speed. Seamless control, the best of both worlds. Compare Deployment Options →`,
+      title: 'SaaS/Hybrid',
+    },
+  ];
+
   return (
     <>
-      <section className="lg:py-25 md:py-22.5 py-17.5">
+      {/* Built to Protect. Designed to Perform. */}
+      <section
+        className="lg:py-25 md:py-22.5 py-17.5"
+        data-aos="fade-up"
+        data-aos-duration="700"
+        data-aos-easing="ease-out-cubic"
+        data-aos-once="true"
+      >
         <div className="container">
-          <div className="lg:mb-12.5 text-center mb-7.5">
+          <div
+            className="lg:mb-12.5 text-center mb-7.5"
+            data-aos="fade-up"
+            data-aos-duration="700"
+            data-aos-easing="ease-in-out"
+          >
+            <div className="bg-primary py-0.5 px-3.75 rounded-full font-medium text-sm inline-flex mb-2.5 text-dark">
+              Built to Protect. Designed to Perform.
+            </div>
             <h2 className="mb-2.5 lg:text-5.5xl md:text-4.6xl text-3.4xl">
-              Key features that save time
+              Why choose SparkVerseAI?
             </h2>
             <p className="text-base mb-2.5">
-              Discover our powerful tools designed to streamline your workflow and boost
-              productivity.
+              Security is embedded into every layer of SparkVerse AI.
             </p>
           </div>
 
-          <div className="grid md:grid-cols-8 lg:gap-12.5 gap-5 items-center">
-            <div
-              className="md:col-span-5"
-              data-aos="fade-up"
-              data-aos-easing="linear"
-              data-aos-duration="300"
-            >
-              <div className="bg-white rounded-2xl lg:p-12.5 h-full pe-0 p-4">
-                <div className="grid md:grid-cols-2 lg:flex-row lg:gap-15 flex-col gap-7.5">
-                  <div>
-                    <div className="md:size-15 size-12.5 mb-5 bg-primary rounded-full flex items-center justify-center">
-                      <IconifyIconClient
-                        icon="solar:chart-square-linear"
-                        className="lg:size-7.5 size-6.5 text-dark"
-                      />
+          <Swiper
+            modules={[Navigation]}
+            loop={true}
+            navigation={{
+              nextEl: '.custom-next',
+              prevEl: '.custom-prev',
+            }}
+            className="testiSwiper cursor-col-resize"
+            data-aos="fade-up"
+            data-aos-duration="700"
+            data-aos-easing="ease-in-out"
+          >
+            <div className="swiper-wrapper">
+              {sliderData.map((item, idx) => (
+                <SwiperSlide key={idx}>
+                  <div className="grid md:grid-cols-6 md:gap-5 gap-5">
+                    <div className="md:col-span-2">
+                      <Image src={item.image} alt="" className="size-full rounded-full" />
                     </div>
-                    <h3 className="lg:text-2.5xl md:text-2.5xl text-1.5xl mb-2.5">
-                      Generate detailed reports with just a few clicks.
-                    </h3>
-                    <p className="text-base lg:mt-35 md:mt-25 mt-5">
-                      Discover our powerful tools designed to streamline your workflow and boost
-                      productivity.
-                    </p>
+                    <div className="md:col-span-4">
+                      <p className="mb-7.5 text-1.5xl text-black">{item.des} </p>
+                      <div className="text-lg">{item.title} </div>
+                    </div>
                   </div>
-
-                  <div className="flex items-end relative">
-                    <Image src={about1} alt="" className="rounded-2xl flex" />
-                    <Image
-                      src={about2}
-                      alt=""
-                      className="absolute md:block md:-start-7.5 bottom-auto lg:top-22.5 hidden "
-                    />
-                  </div>
-                </div>
+                </SwiperSlide>
+              ))}
+            </div>
+            <div className="relative z-10 flex gap-2.5 justify-end -mt-5">
+              <div className="custom-prev cursor-pointer size-8.75 bg-black/10 rounded-full inline-flex items-center justify-center">
+                <IconifyIconClient icon="tabler:chevron-left" className="size-5.5 text-black" />
+              </div>
+              <div className="custom-next cursor-pointer size-8.75 bg-black/10 rounded-full inline-flex items-center justify-center">
+                <IconifyIconClient icon="tabler:chevron-right" className="size-5.5 text-black" />
               </div>
             </div>
-
-            <div
-              className="md:col-span-3"
-              data-aos="fade-up"
-              data-aos-easing="linear"
-              data-aos-duration="300"
-            >
-              <div className="flex lg:p-12.5 p-5 bg-dark rounded-2xl lg:gap-24 gap-15 flex-col">
-                <div>
-                  <div className="md:size-15 size-12.5 mb-5 bg-primary rounded-full flex items-center justify-center">
-                    <IconifyIconClient icon="solar:bolt-linear" className="lg:size-7.5 size-6.5 text-dark" />
-                  </div>
-                  <h4 className="text-white lg:text-2.5xl md:text-2.5xl text-1.5xl mb-2.5">
-                    Work seamlessly with your team, no matter where they are
-                  </h4>
-                </div>
-                <div>
-                  <div className="gap-3.5 flex flex-col">
-                    <div className="flex gap-2.5">
-                      <IconifyIconClient icon="tabler:circle-check" className="size-6 text-primary" />
-                      <div className="text-white text-base">Live editing</div>
-                    </div>
-                    <div className="flex gap-2.5">
-                      <IconifyIconClient icon="tabler:circle-check" className="size-6 text-primary" />
-                      <div className="text-white text-base">Instant feedback </div>
-                    </div>
-                    <div className="flex gap-2.5">
-                      <IconifyIconClient icon="tabler:circle-check" className="size-6 text-primary" />
-                      <div className="text-white text-base">Task assignments </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
+          </Swiper>
 
           <div
             className="mt-10 bg-primary rounded-2xl lg:p-10 p-5"
@@ -117,13 +128,25 @@ const Features = () => {
                   <h6 className="lg:text-5.5xl md:text-4.6xl text-3.4xl">4.8</h6>
                   <div className="gap-1 flex-col flex">
                     <div className="flex gap-1.5">
-                      <IconifyIconClient icon="tabler:star-filled" className="lg:size-6 size-5.5 text-dark" />
+                      <IconifyIconClient
+                        icon="tabler:star-filled"
+                        className="lg:size-6 size-5.5 text-dark"
+                      />
 
-                      <IconifyIconClient icon="tabler:star-filled" className="lg:size-6 size-5.5 text-dark" />
+                      <IconifyIconClient
+                        icon="tabler:star-filled"
+                        className="lg:size-6 size-5.5 text-dark"
+                      />
 
-                      <IconifyIconClient icon="tabler:star-filled" className="lg:size-6 size-5.5 text-dark" />
+                      <IconifyIconClient
+                        icon="tabler:star-filled"
+                        className="lg:size-6 size-5.5 text-dark"
+                      />
 
-                      <IconifyIconClient icon="tabler:star-filled" className="lg:size-6 size-5.5 text-dark" />
+                      <IconifyIconClient
+                        icon="tabler:star-filled"
+                        className="lg:size-6 size-5.5 text-dark"
+                      />
 
                       <IconifyIconClient
                         icon="tabler:star-half-filled"

@@ -1,14 +1,20 @@
 import React from 'react';
 // import Apple from '@/assets/images/logo/apple-store.svg';
 // import Play from '@/assets/images/logo/play-store.svg';
-import hero from '@/assets/images/hero/semantic-search.webp';
+import hero from '@/assets/images/svai/semantic-search.webp';
 import Link from 'next/link';
 import Image from 'next/image';
 
 const Hero = () => {
   return (
     <>
-      <section className="bg-dark py-12.5 lg:py-30 md:py-20">
+      <section
+        className="bg-dark py-12.5 lg:py-30 md:py-20"
+        data-aos="fade-up"
+        data-aos-duration="700"
+        data-aos-easing="ease-out-cubic"
+        data-aos-once="true"
+      >
         <div className="container">
           <div className="grid lg:grid-cols-2 grid-cols-1 lg:gap-37.5 gap-10">
             <div data-aos="fade-right">
@@ -48,7 +54,13 @@ const Hero = () => {
               </div> */}
             </div>
             <div>
-              <div className="relative">
+              <div
+                className="relative"
+                data-aos="fade-left"
+                data-aos-duration="700"
+                data-aos-easing="ease-out-cubic"
+                data-aos-once="true"
+              >
                 <Image src={hero} alt="Element image" className="rounded-2xl" />
               </div>
             </div>

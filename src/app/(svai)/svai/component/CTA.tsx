@@ -6,25 +6,35 @@ import Link from 'next/link';
 const CTA = () => {
   return (
     <>
-      <section className="lg:py-25 md:py-22.5 pb-17.5">
+      <section
+        className="lg:py-25 md:py-22.5 pb-17.5"
+        data-aos="fade-up"
+        data-aos-duration="700"
+        data-aos-easing="ease-out-cubic"
+        data-aos-once="true"
+      >
         <div className="container">
           <div className="relative">
             <Image
               src={about}
-              alt=""
+              alt="CTA background"
               className="rounded-2xl lg:h-full w-full h-81.5  object-cover"
             />
             <div className="absolute top-0">
               <div
                 className="grid lg:grid-cols-2 lg:gap-40 gap-5 lg:p-12.5 lg:pb-75 p-5 pb-12.5"
                 data-aos="fade-up"
-                data-aos-duration="600"
+                data-aos-duration="700"
                 data-aos-easing="ease-in-out"
               >
-                <div>
-                  <h2 className="text-white lg:text-2.5xl md:text-2.5xl text-2xl mb-2.5">
-                    Be the first to know about new features,improvements, and special promotions.
+                <div className="flex flex-col justify-center h-full max-w-3xl">
+                  <h2 className="text-white lg:text-4xl md:text-3.4xl text-2.6xl mb-2.5">
+                    Ready to Redefine Your E-Commerce Intelligence?
                   </h2>
+                  <p className="text-white/90 text-base">
+                    Experience the next generation of semantic search, analytics and privacy-first
+                    AI.
+                  </p>
                 </div>
 
                 <div>
