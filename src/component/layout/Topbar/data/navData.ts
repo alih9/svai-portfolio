@@ -116,13 +116,18 @@ export interface NavItem {
 //   },
 // ];
 
+//  Home | Products | Solutions | Security | Resources | Demo		🔍 Search SparkVerse		         Start Free Trial
 export const navMenuData: NavItem[] = [
   {
     title: 'Home',
     type: 'link',
     href: '/svai',
   },
-
+  {
+    title: 'Products',
+    type: 'link',
+    href: '/products',
+  },
   {
     title: 'Solutions',
     type: 'link',
@@ -130,21 +135,9 @@ export const navMenuData: NavItem[] = [
   },
 
   {
-    title: 'Features',
+    title: 'Security ',
     type: 'link',
-    href: '/features',
-  },
-
-  {
-    title: 'Use Cases',
-    type: 'link',
-    href: '/use-cases',
-  },
-
-  {
-    title: 'Integrations',
-    type: 'link',
-    href: '/integrations',
+    href: '/security',
   },
 
   {
@@ -154,19 +147,7 @@ export const navMenuData: NavItem[] = [
   },
 
   {
-    title: 'Pricing',
-    type: 'link',
-    href: '/pricing',
-  },
-
-  {
-    title: 'About Us',
-    type: 'link',
-    href: '/about-us',
-  },
-
-  {
-    title: 'Contact Us',
+    title: 'Demo',
     type: 'link',
     href: '/contact-us',
   },
