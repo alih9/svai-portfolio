@@ -2,12 +2,12 @@ import React from 'react';
 import Hero from './component/Hero';
 import Features from './component/Features';
 import CoreOfferings from './component/CoreOfferings';
-import Step from './component/Step';
+import SolutionsThatDrive from './component/SolutionsThatDrive';
 import IntegrateAnywhere from './component/IntegrateAnywhere';
 
-import CTA from './component/CTA';
+import AccelerateInnovation from './component/AccelerateInnovation';
 import HowItWorks from './component/HowItWorks';
-import Pricing from './component/Pricing';
+import CTA from './component/CTA';
 
 import { Metadata } from 'next';
 import SuccessStories from './component/SuccessStories';
@@ -21,12 +21,13 @@ const Page = () => {
     <>
       <Hero />
       <CoreOfferings />
-      <Step />
+      <SolutionsThatDrive />
       <Features />
       <IntegrateAnywhere />
       <SuccessStories />
       <HowItWorks />
-      <Pricing />
+      <AccelerateInnovation />
+
       <CTA />
     </>
   );

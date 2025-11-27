@@ -4,6 +4,7 @@ import React from 'react';
 import hero from '@/assets/images/svai/semantic-search.webp';
 import Link from 'next/link';
 import Image from 'next/image';
+import IconifyIconClient from '@/component/IconifyIconClient';
 
 const Hero = () => {
   return (
@@ -19,39 +20,57 @@ const Hero = () => {
           <div className="grid lg:grid-cols-2 grid-cols-1 lg:gap-37.5 gap-10">
             <div data-aos="fade-right">
               <div className="bg-primary py-0.5 px-3.75 rounded-full font-medium text-sm inline-flex mb-2.5 text-dark">
-                Smarter Search. Safer Data. Seamless Experience.
+                Intelligent Knowledge Hub
               </div>
               <h1 className="text-white lg:text-5xl md:text-4.5xl text-3xl mb-2.5 box">
-                Next-Generation AI Search for Intelligent Discovery
+                Turn Fragmented Data into Intelligent Action
               </h1>
-              <p className="lg:mt-5 lg:mb-12.5 mt-2.5 mb-5 text-white">
-                Powered by SparkVerse Smart AI Search, delivered through a fully customizable,
-                privacy-first knowledge management dashboard that converts complex information into
-                clear, contextual insight.
+              <p className="lg:mt-5 mt-2.5 mb-5 text-white">
+                Create a unified knowledge layer for your search and AI agents while ensuring total
+                control over your infrastructure.
               </p>
-              <Link
-                href="/demo"
-                className="py-3.5 md:px-7.5 px-6 inline-flex bg-white font-medium rounded-2xl text-dark transition-all duration-300 hover:bg-primary"
-              >
-                Try for free
-              </Link>
-
-              {/* <div className="md:flex md:items-center md:gap-12.5 md:flex-row lg:mt-20 md:mt7.5 mt-7.5 flex gap-2.5 flex-col">
-                <div className="flex items-center gap-2.5 text-white">
-                  <Image src={Apple} alt="App Store" className="size-7.5" />
-                  <span className="text-base font-medium">4.5</span>
-                  <IconifyIconClient icon="tabler:star-filled" className="text-yellow-400" />
-                  <span className="text-base text-white">on App store</span>
+              <div className="flex flex-col gap-2.5 lg:mb-12.5 lg:mt-5 mt-2.5 mb-5 text-white">
+                <div className="flex  items-start gap-2.5">
+                  <IconifyIconClient icon="tabler:circle-check" className="size-6" />
+                  <div>
+                    Power Advanced AI: Boost semantic search, chatbots, and proactive agents.{' '}
+                  </div>
                 </div>
-
-                <div className="flex items-center gap-2.5 text-white">
-                  <Image src={Play} alt="Play Store" className="size-7.5" />
-                  <span className="text-base font-medium">4.5</span>
-                  <IconifyIconClient icon="tabler:star-filled" className="text-yellow-400" />
-
-                  <span className="text-base text-white">on Play store</span>
+                <div className="flex  items-start gap-2.5">
+                  <IconifyIconClient icon="tabler:circle-check" className="size-6" />
+                  <div>
+                    Unify Your Knowledge: Transform siloed catalog data into one intelligent
+                    source.{' '}
+                  </div>
                 </div>
-              </div> */}
+                <div className="flex  items-start gap-2.5">
+                  <IconifyIconClient icon="tabler:circle-check" className="size-6" />
+                  <div>
+                    Deploy with Confidence: Privacy-first, SaaS or hybrid deployment for
+                    enterprises.{' '}
+                  </div>
+                </div>
+              </div>
+
+              {/* CTA */}
+              <div className="flex md:gap-5 gap-2.5 md:flex-row flex-col items-center">
+                <div>
+                  <Link
+                    href="/demo"
+                    className="py-3.5 md:px-7.5 px-6.5 inline-flex items-center text-center bg-white font-medium rounded-2xl text-dark transition-all duration-300 hover:text-primary"
+                  >
+                    Get a Demo
+                  </Link>
+                </div>
+                <div>
+                  <Link
+                    href="/documentation"
+                    className="py-3.5 md:px-7.5 px-6.5 inline-flex items-center text-center bg-primary font-medium rounded-2xl text-black transition-all duration-300 hover:text-primary hover:bg-black"
+                  >
+                    View Documentation
+                  </Link>
+                </div>
+              </div>
             </div>
             <div>
               <div

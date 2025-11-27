@@ -52,7 +52,7 @@ type OfferingSection = {
 
 const coreOfferingSections: OfferingSection[] = [
   {
-    title: 'Semantic Search',
+    title: 'SparkVerse Smart AI Search',
     description:
       'Deliver context-aware, intent-driven search that understands your customers like never before. Our hybrid semantic engine combines language intelligence with keyword precision to ensure fast, relevant results that drive conversions.',
     items: [
@@ -153,14 +153,14 @@ const CoreOfferings = () => {
             data-aos-easing="ease-in-out"
           >
             <h2 className="mb-2.5 lg:text-5.5xl md:text-4.6xl text-3.4xl">
-              SparkVerseAI Core Offerings
+              Core Capabilities Designed for Modern E-Commerce
             </h2>
             <p className="text-base mb-2.5">
               SparkVerse AI empowers e-commerce and enterprise platforms to go beyond traditional
-              search. It delivers a complete, secure and intelligent ecosystem—from semantic search
-              that understands intent to AI chatbots and agents that sell, assist and learn—powered
-              by real-time analytics and deployed with enterprise-grade privacy, giving you full
-              control over customer interactions and data.
+              search. It delivers a complete, secure and intelligent ecosystem for e-commerce, from
+              semantic search that understands intent to AI chatbots and agents that sell, assist
+              and learn. This is powered by real-time analytics and deployed with enterprise-grade
+              privacy, giving you full control over your customer interactions and data.
             </p>
           </div>
           <div className="grid md:grid-cols-2 md:gap-25 items-start gap-7.5 lg:pb-25 pb-17.5">

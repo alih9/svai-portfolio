@@ -14,31 +14,30 @@ export const userStepsData: StepItem[] = [
     number: '01',
     title: 'Data Ingestion',
     description:
-      'We connect seamlessly with your existing data sources including files, APIs, supplier feeds and cloud repositories, consolidating them within the SparkVerse AI environment.',
+      'Connect to files, APIs, supplier feeds, and cloud repositories to bring all product data into one unified environment. ',
   },
   {
     number: '02',
     title: 'Data Processing',
-    description:
-      'Collected data is cleaned, standardized and structured for consistency, reliability and readiness for further analysis and enrichment.',
+    description: 'Clean, standardize, and structure incoming data for consistency and readiness.',
   },
   {
     number: '03',
     title: 'Analysis and Enrichment',
     description:
-      'Artificial intelligence models analyze and enrich the data, infer missing attributes, detect inconsistencies and enhance semantic understanding for improved accuracy and contextual meaning.',
+      'AI models enrich the data, infer missing attributes, resolve inconsistencies, and add semantic understanding.',
   },
   {
     number: '04',
     title: 'Intelligent Retrieval',
     description:
-      'The unified knowledge network enables AI-powered search and discovery that understand user intent and context, delivering precise, relevant results in real time through secure APIs.',
+      'A unified knowledge network powers intent-aware search and discovery, delivering precise results through secure APIs. ',
   },
   {
     number: '05',
     title: 'Privacy and Security by Design',
     description:
-      'SparkVerse AI embeds privacy and data security by design throughout every stage of the process. End-to-end encryption, secure storage and role-based access controls ensure GDPR-ready compliance and keep your data confidential and intact.',
+      'End-to-end encryption, RBAC, and built-in privacy controls ensure secure, compliant handling across every stage. ',
   },
 ];
 
@@ -63,7 +62,7 @@ const HowItWorks = () => {
               How It Works
             </div>
             <h2 className="mb-2.5 lg:text-5.5xl md:text-4.6xl text-3.4xl text-white">
-              From Raw Data to Intelligent Product Knowledge
+              From raw data to intelligent discovery: in five steps.
             </h2>
             <p className="text-base text-white/80 md:w-3/5 mx-auto">
               Our End-to-End Product Knowledge Intelligence Engine transforms scattered,
@@ -118,7 +117,7 @@ const HowItWorks = () => {
 
               <Link
                 href="/sign-up"
-                className="py-3.5 lg:px-7.5 px-6.5 rounded-2xl inline-flex font-medium bg-primary text-dark hover:text-primary hover:bg-black transition-all duration-300"
+                className="mt-12 py-3.5 lg:px-7.5 px-6.5 rounded-2xl inline-flex font-medium bg-primary text-dark hover:text-primary hover:bg-black transition-all duration-300"
               >
                 Get started now
               </Link>

@@ -13,28 +13,59 @@ const Features = () => {
     image: StaticImageData;
     des: string;
     title: string;
+    link: string;
+    linkText?: string;
   };
 
   const sliderData: sliderType[] = [
     {
       image: Fine,
-      des: `Give every user the right access—no more, no less. Fine‑grained roles and permissions help you lock down sensitive data and streamline approvals with full audit trails. Explore Access Controls →`,
-      title: 'Fine-Grained Access Control',
+      title: 'Security by Design',
+      des: `Engineered from the ground up with privacy, robustness, and secure architecture principles.`,
+      link: '#',
+      linkText: 'Explore Security by Design',
     },
     {
       image: Tls,
-      des: `Protect data in transit and at rest with AES‑256 encryption and TLS 1.3. Modern ciphers, perfect forward secrecy and strict key management keep your information safe by default. See Encryption Standards →`,
-      title: 'AES-256 / TLS 1.3',
+      title: 'Fine-Grained Access Control',
+      des: `Every user sees only what they are authorized to access, ensuring strict governance.`,
+      link: '#',
+      linkText: 'See Encryption Standards',
     },
     {
       image: Fine,
-      des: `Stay compliant without slowing down. GDPR‑ready controls for consent, data residency, export, and erasure requests—plus DPA support when you need it. Review Compliance Features →`,
-      title: 'GDPR-ready ',
+      title: 'Zero-Trust Architecture',
+      des: `No implicit trust. Every request is verified, authenticated, and authorized.`,
+      link: '#',
+      linkText: 'Review Compliance Features',
     },
     {
       image: Fine,
-      des: `Deploy your way with SaaS or hybrid—keep sensitive data private while leveraging the cloud for scale and speed. Seamless control, the best of both worlds. Compare Deployment Options →`,
-      title: 'SaaS/Hybrid',
+      title: 'AES-256 & TLS 1.3 Encryption',
+      des: `Your data stays secure in transit and at rest with industry-leading encryption.`,
+      link: '#',
+      linkText: 'Learn More',
+    },
+    {
+      image: Fine,
+      title: 'Global Compliance Ready',
+      des: `Built with privacy-by-design principles to meet global data protection standards.`,
+      link: '#',
+      linkText: 'Learn More',
+    },
+    {
+      image: Fine,
+      title: 'Flexible, Privacy-First Deployment',
+      des: `SaaS or hybrid integration to maintain data residency and governance control.`,
+      link: '#',
+      linkText: 'Learn More',
+    },
+    {
+      image: Fine,
+      title: 'Academic & Research Affiliation',
+      des: `Rooted in academic R&D excellence for trustworthy, research-grade AI.`,
+      link: '#',
+      linkText: 'Learn More',
     },
   ];
 
@@ -59,10 +90,11 @@ const Features = () => {
               Built to Protect. Designed to Perform.
             </div>
             <h2 className="mb-2.5 lg:text-5.5xl md:text-4.6xl text-3.4xl">
-              Why choose SparkVerseAI?
+              Built on Trust: Our Security and Compliance Foundation
             </h2>
             <p className="text-base mb-2.5">
-              Security is embedded into every layer of SparkVerse AI.
+              Security is embedded into every layer of SparkVerse AI. From ingestion to intelligent
+              retrieval, your data remains private, compliant, and fully under your control.
             </p>
           </div>
 
@@ -85,9 +117,23 @@ const Features = () => {
                     <div className="md:col-span-2">
                       <Image src={item.image} alt="" className="size-full rounded-full" />
                     </div>
-                    <div className="md:col-span-4">
-                      <p className="mb-7.5 text-1.5xl text-black">{item.des} </p>
-                      <div className="text-lg">{item.title} </div>
+                    <div className="flex gap-2 flex-col md:col-span-4">
+                      <div className="text-2xl">{item.title} </div>
+                      <p className="mb-7.5 text-lg text-black">{item.des} </p>
+                      <Link
+                        href={item.link}
+                        className="transition-transform duration-300 ease-in-out hover:-translate-y-1.5 mb-7.5"
+                      >
+                        {' '}
+                        <div className="flex items-center gap-1.25 underline">
+                          <div className="text-black hidden lg:block">{item.linkText}</div>
+                          <div className="text-black lg:hidden">View details</div>
+                          <IconifyIconClient
+                            icon="tabler:arrow-right"
+                            className="size-5 text-black"
+                          />
+                        </div>
+                      </Link>
                     </div>
                   </div>
                 </SwiperSlide>

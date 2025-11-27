@@ -56,9 +56,15 @@ const IntegrateAnywhere = () => {
             data-aos-easing="ease-in-out"
           >
             <div className="bg-primary py-0.5 px-3.75 rounded-full font-medium text-sm inline-flex mb-2.5 text-dark">
-              Flexible APIs for SaaS or Hybrid Environments.
+              Integrate Anywhere
             </div>
-            <h2 className="mb-2.5 lg:text-5.5xl md:text-4.6xl text-3.4xl">Integrate Anywhere</h2>
+            <h2 className="mb-2.5 lg:text-5.5xl md:text-4.6xl text-3.4xl">
+              Enterprise-Grade Connectors for Modern Cloud Ecosystems
+            </h2>
+            {/* <p>
+              Connect SparkVerse AI to Azure, AWS, GCP, SharePoint, databases, and internal systems
+              using pre-built connectors and open APIs.
+            </p> */}
           </div>
 
           <hr className="lg:mt-17.5 lg:pt-17.5 md:pt-10 md:mt-10 border-neutral-200 pt-10 mt-10" />
