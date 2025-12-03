@@ -1,7 +1,7 @@
-import Image from 'next/image';
-import React from 'react';
+'use client';
+
+import React, { useState } from 'react';
 import IconifyIconClient from '@/component/IconifyIconClient';
-import four from '@/assets/images/svai/secure-hybrid-deployments.webp';
 
 export interface FeatureItem {
   icon: string;
@@ -104,15 +104,19 @@ const coreOfferingSections: OfferingSection[] = [
       'Role-Based Insights & Reporting',
     ],
   },
-];
-
-const secureDeploymentItems: string[] = [
-  'Role-Based Access Control (RBAC)',
-  'End-To-End Encryption & Secure APIs',
-  'GDPR & Global Data Compliance',
-  'Custom SaaS / Hybrid Deployments',
-  'Private Vector Storage & Data Isolation',
-  'Zero-Trust Security Framework',
+  {
+    title: 'Secure & Hybrid Deployments',
+    description:
+      ' Privacy-by-design architecture with total deployment freedom: SaaS or hybrid. Enforced by advanced controls, encryption, and compliance to protect users and your brand.',
+    items: [
+      'Role-Based Access Control (RBAC)',
+      'End-To-End Encryption & Secure APIs',
+      'GDPR & Global Data Compliance',
+      'Custom SaaS / Hybrid Deployments',
+      'Private Vector Storage & Data Isolation',
+      'Zero-Trust Security Framework',
+    ],
+  },
 ];
 
 const OfferingColumn = ({
@@ -122,7 +126,7 @@ const OfferingColumn = ({
 }: {
   section: OfferingSection;
   bgClass: string;
-  aosDirection: 'fade-right' | 'fade-left';
+  aosDirection: 'fade-right' | 'fade-left' | 'fade-up';
 }) => {
   return (
     <div data-aos={aosDirection} data-aos-duration={600} data-aos-easing="ease-in-out">
@@ -136,6 +140,12 @@ const OfferingColumn = ({
 };
 
 const CoreOfferings = () => {
+  const tabs: { label: string }[] = [
+    ...coreOfferingSections.map(section => ({ label: section.title })),
+  ];
+
+  const [activeIndex, setActiveIndex] = useState(0);
+
   return (
     <>
       <section
@@ -145,77 +155,53 @@ const CoreOfferings = () => {
         data-aos-easing="ease-out-cubic"
         data-aos-once="true"
       >
+        <div className="lg:mb-12.5 lg:mx-auto text-center lg:w-3/4 mb-7.5">
+          <h2 className="mb-2.5 lg:text-5.5xl md:text-4.6xl text-3.4xl">
+            Core Capabilities Designed for Modern E-Commerce
+          </h2>
+          <p className="text-base mb-2.5">
+            SparkVerse AI empowers e-commerce and enterprise platforms to go beyond traditional
+            search. It delivers a complete, secure and intelligent ecosystem for e-commerce, from
+            semantic search that understands intent to AI chatbots and agents that sell, assist and
+            learn. This is powered by real-time analytics and deployed with enterprise-grade
+            privacy, giving you full control over your customer interactions and data.
+          </p>
+        </div>
         <div className="container">
           <div
-            className="lg:mb-12.5 lg:mx-auto text-center lg:w-3/4 mb-7.5"
+            className="flex flex-wrap justify-center gap-2.5 rounded-2xl bg-white p-1.5 lg:mb-12.5 mb-7.5 border border-black/5 w-full"
             data-aos="fade-up"
             data-aos-duration={500}
             data-aos-easing="ease-in-out"
           >
-            <h2 className="mb-2.5 lg:text-5.5xl md:text-4.6xl text-3.4xl">
-              Core Capabilities Designed for Modern E-Commerce
-            </h2>
-            <p className="text-base mb-2.5">
-              SparkVerse AI empowers e-commerce and enterprise platforms to go beyond traditional
-              search. It delivers a complete, secure and intelligent ecosystem for e-commerce, from
-              semantic search that understands intent to AI chatbots and agents that sell, assist
-              and learn. This is powered by real-time analytics and deployed with enterprise-grade
-              privacy, giving you full control over your customer interactions and data.
-            </p>
-          </div>
-          <div className="grid md:grid-cols-2 md:gap-25 items-start gap-7.5 lg:pb-25 pb-17.5">
-            {coreOfferingSections.slice(0, 2).map((section, i) => (
-              <OfferingColumn
-                key={section.title}
-                section={section}
-                bgClass={i % 2 === 0 ? 'bg-white' : 'bg-primary'}
-                aosDirection={i % 2 === 0 ? 'fade-right' : 'fade-left'}
-              />
-            ))}
+            {tabs.map((tab, index) => {
+              const isActive = index === activeIndex;
+              return (
+                <button
+                  key={tab.label}
+                  type="button"
+                  onClick={() => setActiveIndex(index)}
+                  className={`relative rounded-full px-4 py-2 text-sm md:text-base transition-all duration-300 ${
+                    isActive
+                      ? 'bg-primary text-dark shadow-[0_10px_30px_rgba(0,0,0,0.25)]'
+                      : 'bg-transparent text-dark/70 hover:text-dark hover:bg-body-bg'
+                  }`}
+                >
+                  <span className="font-medium whitespace-nowrap">{tab.label}</span>
+                  {isActive && (
+                    <span className="pointer-events-none absolute inset-0 rounded-full ring-1 ring-primary/40" />
+                  )}
+                </button>
+              );
+            })}
           </div>
 
-          <div className="grid md:grid-cols-2 md:gap-25 items-start gap-7.5 lg:pb-25 pb-17.5">
-            {coreOfferingSections.slice(2, 4).map((section, i) => (
-              <OfferingColumn
-                key={section.title}
-                section={section}
-                bgClass={i % 2 === 0 ? 'bg-primary' : 'bg-white'}
-                aosDirection={i % 2 === 0 ? 'fade-right' : 'fade-left'}
-              />
-            ))}
-          </div>
-          <div className="grid md:grid-cols-2 lg:gap-25 md:gap-7.5 items-center gap-7.5">
-            <div
-              className="md:order-1 order-2"
-              data-aos="fade-right"
-              data-aos-duration={500}
-              data-aos-easing="ease-in-out"
-            >
-              <Image
-                src={four}
-                alt="Secure & Hybrid Deployments illustration"
-                className="rounded-2xl"
-              />
-            </div>
-            {/* Secure & Hybrid Deployments */}
-            <div
-              className="bg-white rounded-2xl lg:p-10 p-5 h-full"
-              data-aos="fade-left"
-              data-aos-duration={600}
-              data-aos-easing="ease-in-out"
-            >
-              <h3 className="lg:text-4xl mb-2.5 md:text-3.4xl text-2.6xl">
-                Secure & Hybrid Deployments
-              </h3>
-              <p className="mb-2.5">
-                Privacy-by-design architecture with total deployment freedom: SaaS or hybrid.
-                Enforced by advanced controls, encryption, and compliance to protect users and your
-                brand.
-              </p>
-              <BulletList items={secureDeploymentItems} />
-            </div>
-          </div>
-          <div className="grid lg:grid-cols-4 md:grid-cols-2 lg:gap-7.5 lg:mt-32.5 mt-12.5 gap-5">
+          <OfferingColumn
+            section={coreOfferingSections[activeIndex]}
+            bgClass="bg-white"
+            aosDirection="fade-up"
+          />
+          <div className="grid lg:grid-cols-4 md:grid-cols-2 lg:gap-7.5 lg:mt-16 mt-8 gap-5">
             {featuresData.map(item => (
               <div
                 key={item.label}

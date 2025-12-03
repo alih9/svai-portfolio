@@ -36,6 +36,15 @@ const AccelerateInnovation = () => {
                 Contact with a Generative AI Expert
               </Link>
             </div>
+
+            <hr className="border-neutral-200 my-8" />
+            <div className="flex lg:gap-5 md:gap-25 md:flex-row gap-3.75 flex-col lg:justify-between">
+              <p>
+                In the section below, the heading and text need to be replaced with the provided
+                variant. Moreover, an image and link to the design for this section is provided for
+                your perusal.
+              </p>
+            </div>
           </div>
         </div>
       </section>

@@ -149,7 +149,7 @@ const Features = () => {
             </div>
           </Swiper>
 
-          <div
+          {/* <div
             className="mt-10 bg-primary rounded-2xl lg:p-10 p-5"
             data-aos="fade-up"
             data-aos-duration="500"
@@ -204,9 +204,9 @@ const Features = () => {
                 </div>
               </div>
             </div>
-          </div>
+          </div> */}
 
-          <div
+          {/* <div
             className="flex md:justify-center gap-2.5 mt-10 flex-wrap justify-start"
             data-aos="fade-up"
             data-aos-duration="1000"
@@ -220,7 +220,7 @@ const Features = () => {
               <div className="underline gap-1">Let's chat</div>
               <IconifyIconClient icon="tabler:arrow-right" className="size-6" />
             </Link>
-          </div>
+          </div> */}
         </div>
       </section>
     </>
