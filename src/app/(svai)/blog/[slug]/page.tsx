@@ -30,7 +30,7 @@ export async function generateMetadata({ params }: Props) {
   return {
     title: `${blog.title} | SparkVerseAI`,
     description: blog.description,
-    keywords: blog.keywords ? blog.keywords.split(',').map(k => k.trim()) : [],
+    keywords: blog.keywords ? blog.keywords.split(',').map((k: string) => k.trim()) : [],
     openGraph: {
       title: blog.title,
       description: blog.description,
