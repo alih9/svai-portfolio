@@ -33,7 +33,7 @@ export default function LoginPage() {
   };
 
   return (
-    <div className="flex flex-col items-center justify-center min-h-[50vh] font-body bg-body-bg">
+    <div className="flex flex-col items-center justify-center font-body">
       <div className="w-full max-w-md p-8 bg-white rounded-2xl shadow-lg border border-gray-100">
         <h1 className="text-3xl font-bold font-heading text-center mb-6 text-dark">Admin Login</h1>
         
