@@ -59,11 +59,10 @@ const IntegrateAnywhere = () => {
               Integrate Anywhere
             </div>
             <h2 className="mb-2.5 lg:text-5.5xl md:text-4.6xl text-3.4xl">
-              Enterprise-Grade Connectors for Modern Cloud Ecosystems
+              Enterprise-Ready Cloud Connectors 
             </h2>
             <p className="text-lg text-black px-12">
-              Connect SparkVerse AI to Azure, AWS, GCP, SharePoint, databases, and internal systems
-              using pre-built connectors and open APIs.
+              Provide carousal of various connectors such as AWS, Azure, GCP, SharePoint etc. 
             </p>
           </div>
 

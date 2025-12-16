@@ -11,22 +11,22 @@ export interface FeatureItem {
 
 export const featuresData: FeatureItem[] = [
   {
-    icon: 'solar:shield-check-outline',
-    label: 'Robust security',
+    icon: 'solar:lock-outline',
+    label: 'Privacy-First Security',
     delay: 50,
   },
   {
-    icon: 'solar:smartphone-2-outline',
-    label: 'Mobile access',
+    icon: 'solar:settings-outline',
+    label: 'Customizable AI Stack',
   },
   {
-    icon: 'solar:headphones-round-outline',
-    label: 'Customer support',
+    icon: 'solar:cloud-outline',
+    label: 'SaaS & Hybrid Ready',
     delay: 150,
   },
   {
-    icon: 'solar:lightbulb-outline',
-    label: 'Scalable solutions',
+    icon: 'solar:rocket-outline',
+    label: 'Built to Scale',
     delay: 200,
   },
 ];
@@ -149,7 +149,7 @@ const CoreOfferings = () => {
   return (
     <>
       <section
-        className="lg:py-25 md:py-22.5 py-17.5"
+        className="lg:pt-25 md:pt-22.5 pt-17.5 pb-12"
         data-aos="fade-up"
         data-aos-duration={700}
         data-aos-easing="ease-out-cubic"
@@ -159,17 +159,11 @@ const CoreOfferings = () => {
           <h2 className="mb-2.5 lg:text-5.5xl md:text-4.6xl text-3.4xl">
             Core Capabilities Designed for Modern E-Commerce
           </h2>
-          <p className="text-base mb-2.5">
-            SparkVerse AI empowers e-commerce and enterprise platforms to go beyond traditional
-            search. It delivers a complete, secure and intelligent ecosystem for e-commerce, from
-            semantic search that understands intent to AI chatbots and agents that sell, assist and
-            learn. This is powered by real-time analytics and deployed with enterprise-grade
-            privacy, giving you full control over your customer interactions and data.
-          </p>
+         
         </div>
         <div className="container">
           <div
-            className="flex flex-wrap justify-center gap-2.5 rounded-2xl bg-white p-1.5 lg:mb-12.5 mb-7.5 border border-black/5 w-full"
+            className="flex flex-wrap justify-center gap-2.5 rounded-2xl bg-white p-1.5 mb-7.5 border border-black/5 w-full py-4"
             data-aos="fade-up"
             data-aos-duration={500}
             data-aos-easing="ease-in-out"
@@ -201,7 +195,7 @@ const CoreOfferings = () => {
             bgClass="bg-white"
             aosDirection="fade-up"
           />
-          <div className="grid lg:grid-cols-4 md:grid-cols-2 lg:gap-7.5 lg:mt-16 mt-8 gap-5">
+          <div className="grid lg:grid-cols-4 md:grid-cols-2 lg:gap-7.5 mt-12 gap-5">
             {featuresData.map(item => (
               <div
                 key={item.label}

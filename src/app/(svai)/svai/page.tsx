@@ -20,6 +20,7 @@ const Page = () => {
   return (
     <>
       <Hero />
+      <Ecosystem />
       <CoreOfferings />
       <SolutionsThatDrive />
       <Features />
@@ -27,7 +28,6 @@ const Page = () => {
       <SuccessStories />
       <HowItWorks />
       <AccelerateInnovation />
-      <Ecosystem />
       <CTA />
     </>
   );

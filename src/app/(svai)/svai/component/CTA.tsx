@@ -16,8 +16,7 @@ const CTA = () => {
             >
               <h2 className="lg:text-4xl md:text-[32px] text-2xl">Stay Ahead with SparkVerse AI</h2>
               <div className="mt-5 lg:mb-3.75">
-                Get early access to feature updates, product releases, and insights on intelligent
-                e-commerce.
+                Get product updates and insights on intelligent e-commerce. 
               </div>
               <div>
                 <form className="flex md:gap-5 md:flex-row gap-2.5 flex-col justify-between">
@@ -26,7 +25,7 @@ const CTA = () => {
                       className="py-2.5 px-5 rounded-2xl w-full bg-white border-neutral-200 h-14"
                       placeholder="info@example.com"
                     />
-                    <p className="italic">We respect your privacy. No spam ever. </p>
+                    <p className="italic">No spam. Your privacy comes first.  </p>
                   </div>{' '}
                   <div className="text-center ">
                     <Link

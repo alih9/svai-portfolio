@@ -37,7 +37,7 @@ const SuccessStories = () => {
               data-aos-duration="600"
               data-aos-easing="ease-in-out"
             >
-              <Image src={Story1} alt="Story 1" className="size-full object-cover" />
+              <Image src={Story2} alt="Story 1" className="size-full object-cover" />
 
               <div className="absolute inset-0 w-full h-full opacity-80 z-20 bg-linear-180  from-transparent to-black"></div>
 
@@ -74,7 +74,7 @@ const SuccessStories = () => {
               data-aos-duration="600"
               data-aos-easing="ease-in-out"
             >
-              <Image src={Story2} alt="Story 2" className="size-full object-cover" />
+              <Image src={Story1} alt="Story 2" className="size-full object-cover" />
 
               <div className="absolute inset-0 w-full h-full opacity-80 z-20 bg-linear-180  from-transparent to-black"></div>
 
