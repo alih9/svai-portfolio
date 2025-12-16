@@ -1,6 +1,5 @@
 
 import { createClient } from '@/utils/supabase/server';
-import Link from 'next/link';
 
 // Since we cannot use hooks like usePathname in a server component layout smoothly without client wrapper,
 // we will create a client component for the Sidebar Content or just keep it simple.
