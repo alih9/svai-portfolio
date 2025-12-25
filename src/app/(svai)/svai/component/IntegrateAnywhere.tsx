@@ -3,13 +3,17 @@ import Image, { StaticImageData } from 'next/image';
 import React from 'react';
 import Team3 from '@/assets/images/team/3.png';
 import Team2 from '@/assets/images/team/2.png';
-import Client4 from '@/assets/images/client/4.svg';
-import Client3 from '@/assets/images/client/3.svg';
-import Client7 from '@/assets/images/client/7.svg';
-import Client5 from '@/assets/images/client/5.svg';
+import AWS from '@/assets/images/connectors/AWS.png';
+import Azure from '@/assets/images/connectors/Azure.png';
+import GCP from '@/assets/images/connectors/GCP.png';
+import SharePoint from '@/assets/images/connectors/SharePoint.png';
+import Shopify from '@/assets/images/connectors/Shopify.png';
 import IconifyIconClient from '@/component/IconifyIconClient';
-import { Swiper, SwiperSlide } from 'swiper/react';
-import { Navigation } from 'swiper/modules';
+import Confluence from '@/assets/images/connectors/Confluence.png';
+import GoogleWorkspace from '@/assets/images/connectors/GoogleWorkspace.png';
+import IBMCloud from '@/assets/images/connectors/IBMCloud.png';
+import Notion from '@/assets/images/connectors/Notion.png';
+import SalesForce from '@/assets/images/connectors/SalesForce.png';
 
 type sliderType = {
   image: StaticImageData;
@@ -62,20 +66,26 @@ const IntegrateAnywhere = () => {
               Enterprise-Ready Cloud Connectors 
             </h2>
             <p className="text-lg text-black px-12">
-              Provide carousal of various connectors such as AWS, Azure, GCP, SharePoint etc. 
+              Our platform seamlessly integrates with your existing infrastructure, ensuring a smooth and efficient transition to AI-driven workflows.
             </p>
           </div>
 
           <hr className="lg:mt-17.5 lg:pt-17.5 md:pt-10 md:mt-10 border-neutral-200 pt-10 mt-10" />
-          <div className="flex lg:gap-5 md:gap-25 md:flex-row gap-3.75 flex-col lg:justify-between">
+          <div className="flex lg:gap-5 md:gap-25 md:flex-row gap-3.75 flex-col lg:justify-between items-center">
             <div>
-              <p>See Integration Options</p>
+              <p className="font-medium text-dark">See Integration Options</p>
             </div>
-            <div className="flex lg:gap-10 flex-wrap gap-5">
-              <Image src={Client4} alt="" width={115} className="h-7.5" />
-              <Image src={Client3} alt="" width={142} className="h-7.5" />
-              <Image src={Client7} alt="" width={118} className="h-7.5" />
-              <Image src={Client5} alt="" width={97} className="h-7.5" />
+            <div className="flex lg:gap-6 flex-wrap gap-7.5 items-center justify-center">
+              <Image src={AWS} alt="AWS" height={40} className="w-auto  opacity-80 hover:opacity-100 transition-opacity rounded"  />
+              <Image src={Azure} alt="Azure" height={40} className="w-auto  opacity-80 hover:opacity-100 transition-opacity rounded" />
+              <Image src={GCP} alt="GCP" height={40} className="w-auto  opacity-80 hover:opacity-100 transition-opacity rounded" />
+              <Image src={SharePoint} alt="SharePoint" height={40} className="w-auto  opacity-80 hover:opacity-100 transition-opacity rounded" />
+              <Image src={Shopify} alt="Shopify" height={40} className="w-auto  opacity-80 hover:opacity-100 transition-opacity rounded" />
+              <Image src={Confluence} alt="Confluence" height={40} className="w-auto  opacity-80 hover:opacity-100 transition-opacity rounded" />
+              <Image src={GoogleWorkspace} alt="GoogleWorkspace" height={40} className="w-auto  opacity-80 hover:opacity-100 transition-opacity rounded" />
+              <Image src={IBMCloud} alt="IBMCloud" height={40} className="w-auto  opacity-80 hover:opacity-100 transition-opacity rounded" />
+              <Image src={Notion} alt="Notion" height={40} className="w-auto  opacity-80 hover:opacity-100 transition-opacity rounded" />
+              <Image src={SalesForce} alt="SalesForce" height={40} className="w-auto  opacity-80 hover:opacity-100 transition-opacity rounded" />
             </div>
           </div>
         </div>

@@ -5,8 +5,13 @@ import Link from 'next/link';
 import IconifyIconClient from '@/component/IconifyIconClient';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation } from 'swiper/modules';
-import Tls from '@/assets/images/svai/tls.webp';
-import Fine from '@/assets/images/svai/fine-grained.jpg';
+import ZeroTrust from '@/assets/images/svai/visualization/Zero-Trust Architecture.png';
+import Fine from '@/assets/images/svai/visualization/Fine-Grained Access Control.png';
+import Security from '@/assets/images/svai/visualization/Security by Design.png';
+import Academic from '@/assets/images/svai/visualization/Academic & Research Affiliation.png';
+import Deployment from '@/assets/images/svai/visualization/Flexible, Privacy-First Deployment.png';
+import Encryption from '@/assets/images/svai/visualization/Encryption.png';
+import Compliance from '@/assets/images/svai/visualization/Global Compliance Ready.png';
 
 const Features = () => {
   type sliderType = {
@@ -19,49 +24,49 @@ const Features = () => {
 
   const sliderData: sliderType[] = [
     {
-      image: Fine,
+      image: Security,
       title: 'Security by Design',
       des: `Engineered from the ground up with privacy, robustness, and secure architecture principles.`,
       link: '#',
       linkText: 'Explore Security by Design',
     },
     {
-      image: Tls,
+      image: Fine,
       title: 'Fine-Grained Access Control',
       des: `Every user sees only what they are authorized to access, ensuring strict governance.`,
       link: '#',
       linkText: 'See Encryption Standards',
     },
     {
-      image: Fine,
+      image: ZeroTrust,
       title: 'Zero-Trust Architecture',
       des: `No implicit trust. Every request is verified, authenticated, and authorized.`,
       link: '#',
       linkText: 'Review Compliance Features',
     },
     {
-      image: Fine,
+      image: Encryption,
       title: 'AES-256 & TLS 1.3 Encryption',
       des: `Your data stays secure in transit and at rest with industry-leading encryption.`,
       link: '#',
       linkText: 'Learn More',
     },
     {
-      image: Fine,
+      image: Compliance,
       title: 'Global Compliance Ready',
       des: `Built with privacy-by-design principles to meet global data protection standards.`,
       link: '#',
       linkText: 'Learn More',
     },
     {
-      image: Fine,
+      image: Deployment,
       title: 'Flexible, Privacy-First Deployment',
       des: `SaaS or hybrid integration to maintain data residency and governance control.`,
       link: '#',
       linkText: 'Learn More',
     },
     {
-      image: Fine,
+      image: Academic,
       title: 'Academic & Research Affiliation',
       des: `Rooted in academic R&D excellence for trustworthy, research-grade AI.`,
       link: '#',
@@ -90,11 +95,10 @@ const Features = () => {
               Built to Protect. Designed to Perform.
             </div>
             <h2 className="mb-2.5 lg:text-5.5xl md:text-4.6xl text-3.4xl">
-              Built on Trust: Our Security and Compliance Foundation
+              Enterprise-Grade Protection for Intelligent Data 
             </h2>
             <p className="text-base mb-2.5">
-              Security is embedded into every layer of SparkVerse AI. From ingestion to intelligent
-              retrieval, your data remains private, compliant, and fully under your control.
+              SparkVerse AI is engineered with security and compliance at its core; ensuring your data remains private, governed, and under your control from ingestion to intelligent retrieval. 
             </p>
           </div>
 
@@ -113,11 +117,11 @@ const Features = () => {
             <div className="swiper-wrapper">
               {sliderData.map((item, idx) => (
                 <SwiperSlide key={idx}>
-                  <div className="grid md:grid-cols-6 md:gap-5 gap-5">
-                    <div className="md:col-span-2">
-                      <Image src={item.image} alt="" className="size-full rounded-full" />
+                  <div className="grid md:grid-cols-6 md:gap-8 gap-5 items-center">
+                    <div className="md:col-span-1">
+                      <Image src={item.image} alt={item.title} className="w-full h-auto rounded-xl shadow-md" />
                     </div>
-                    <div className="flex gap-2 flex-col md:col-span-4">
+                    <div className="flex gap-3 flex-col md:col-span-4">
                       <div className="text-2xl">{item.title} </div>
                       <p className="mb-7.5 text-lg text-black">{item.des} </p>
                       <Link

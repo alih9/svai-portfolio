@@ -7,223 +7,142 @@ import Image from 'next/image';
 const Footer = () => {
   return (
     <>
-      <footer className="bg-dark pt-15 pb-10 md:pt-17.5 md:pb-10 lg:pt-25 lg:pb-10 overflow-hidden">
+      <footer className="bg-dark pt-20 pb-10 md:pt-24 md:pb-12 lg:pt-32 lg:pb-12 overflow-hidden">
         <div className="container">
-          <div className="grid md:grid-cols-2 md:gap-12.5 lg:grid-cols-8 lg:gap-5 gap-10">
-            <div className="lg:col-span-3">
-              <Link href="/home-1">
-                {/* Desktop/tablet — full wordmark */}
+          <div className="grid lg:grid-cols-12 gap-12 lg:gap-8">
+            {/* Brand Section */}
+            <div className="lg:col-span-4 max-w-sm">
+              <Link href="/">
                 <Image
                   src="/Logos/PNG/FINAL LOGO-01.png"
-                  alt="Logo"
-                  width={120}
-                  height={44}
-                  className="hidden sm:block h-11 w-auto"
-                />
-                {/* Mobile — short mark */}
-                <Image
-                  src="/Logos/PNG/FINAL LOGO-02.png"
-                  alt="Logo"
-                  width={40}
-                  height={40}
-                  className="block sm:hidden h-11 w-auto"
+                  alt="SparkVerse AI Logo"
+                  width={150}
+                  height={55}
+                  className="h-12 w-auto mb-6"
                 />
               </Link>
-              <p className="mt-2.5 text-white">Trusted solutions for your growing business</p>
-              <div className="mt-10 flex items-center gap-3.5 md:mt-15">
-                <h2 className="md:text-5.5xl text-4xl text-white">4.8</h2>
-                <div>
-                  <div className="mb-1 flex gap-1.5">
-                    <IconifyIconClient
-                      icon="tabler:star-filled"
-                      className="text-xl text-orange-300"
-                    />
-                    <IconifyIconClient
-                      icon="tabler:star-filled"
-                      className="text-xl text-orange-300"
-                    />
-                    <IconifyIconClient
-                      icon="tabler:star-filled"
-                      className="text-xl text-orange-300"
-                    />
-                    <IconifyIconClient
-                      icon="tabler:star-filled"
-                      className="text-xl text-orange-300"
-                    />
-                    <IconifyIconClient
-                      icon="tabler:star-filled"
-                      className="text-xl text-orange-300"
-                    />
-                  </div>
-                  <div className="text-white">Best rated company</div>
-                </div>
+              <h3 className="text-white text-xl font-bold mb-4 leading-tight">
+                AI Product Knowledge Intelligence for Modern E-Commerce.
+              </h3>
+              <p className="text-white/70 text-base mb-8 leading-relaxed">
+                Turning fragmented product data into intelligent search, AI agents, and actionable insights; securely and at scale.
+              </p>
+              <div className="flex gap-5">
+                <Link href="#" className="group">
+                  <IconifyIconClient
+                    icon="tabler:brand-linkedin"
+                    className="size-6 text-white/60 group-hover:text-primary transition-colors duration-300"
+                  />
+                </Link>
+                <Link href="#" className="group">
+                  <IconifyIconClient
+                    icon="tabler:brand-github"
+                    className="size-6 text-white/60 group-hover:text-primary transition-colors duration-300"
+                  />
+                </Link>
+                <Link href="#" className="group">
+                  <IconifyIconClient
+                    icon="tabler:brand-x"
+                    className="size-6 text-white/60 group-hover:text-primary transition-colors duration-300"
+                  />
+                </Link>
               </div>
             </div>
-            <div className="lg:col-span-3">
-              <h4 className="text-1.5xl mb-5 text-white">Pages</h4>
-              <div className="grid grid-cols-2 md:gap-12.5 lg:gap-5 gap-2.5">
-                <div>
-                  <ul className="flex flex-col justify-start gap-2.5 leading-normal">
-                    <li>
-                      <Link href="/home-1" className="text-primary">
-                        Home
-                      </Link>
-                    </li>
-                    <li>
-                      <Link
-                        href="/home-2"
-                        className="hover:text-primary text-white transition-all duration-300"
-                      >
-                        Home 2
-                      </Link>
-                    </li>
-                    <li>
-                      <Link
-                        href="/home-3"
-                        className="hover:text-primary text-white transition-all duration-300"
-                      >
-                        Home 3
-                      </Link>
-                    </li>
-                    <li>
-                      <Link
-                        href="/product-1"
-                        className="hover:text-primary text-white transition-all duration-300"
-                      >
-                        Product
-                      </Link>
-                    </li>
-                    <li>
-                      <Link
-                        href="/product-2"
-                        className="hover:text-primary text-white transition-all duration-300"
-                      >
-                        Product 2
-                      </Link>
-                    </li>
-                    <li>
-                      <Link
-                        href="/product-3"
-                        className="hover:text-primary text-white transition-all duration-300"
-                      >
-                        Product 3
-                      </Link>
-                    </li>
-                  </ul>
-                </div>
-                <div>
-                  <ul className="flex flex-col justify-start gap-2.5 leading-normal">
-                    <li>
-                      <Link
-                        href="/about"
-                        className="hover:text-primary text-white transition-all duration-300"
-                      >
-                        About
-                      </Link>
-                    </li>
-                    <li>
-                      <Link
-                        href="/request-a-demo"
-                        className="hover:text-primary text-white transition-all duration-300"
-                      >
-                        Request a Demo
-                      </Link>
-                    </li>
-                    <li>
-                      <Link
-                        href="/blog"
-                        className="hover:text-primary text-white transition-all duration-300"
-                      >
-                        Blog
-                      </Link>
-                    </li>
-                    <li>
-                      <Link
-                        href="/contact"
-                        className="hover:text-primary text-white transition-all duration-300"
-                      >
-                        Contact
-                      </Link>
-                    </li>
-                    <li>
-                      <Link
-                        href="/faqs"
-                        className="hover:text-primary text-white transition-all duration-300"
-                      >
-                        FAQs
-                      </Link>
-                    </li>
-                    <li>
-                      <Link
-                        href="/privacy-policy"
-                        className="hover:text-primary text-white transition-all duration-300"
-                      >
-                        Privacy
-                      </Link>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-            <div className="lg:col-span-2">
-              <h4 className="text-1.5xl mb-5 text-white">Contact us</h4>
+
+            {/* Menu Columns */}
+            <div className="lg:col-span-8 grid grid-cols-2 md:grid-cols-3 gap-10">
+              {/* Product Section */}
               <div>
-                <p className="mb-3.75 text-sm text-white md:text-base">
-                  1234 Innovation drive, suite 100, tech city, CA 94043
-                </p>
-                <p className="hover:text-primary mb-3.75 text-sm text-white transition-all duration-300 md:text-base">
-                  <Link href="">(123) 456-7890</Link>
-                </p>
-                <p className="hover:text-primary mb-3.75 text-sm text-white underline transition-all duration-300 md:text-base">
-                  <Link href="">example@gmail.com</Link>
-                </p>
-                <div className="mt-7.5 flex items-center gap-2.5 md:mt-12.5">
-                  <div className="flex items-center">
-                    <p className="text-lg text-white">👋 Follow Us:</p>
+                <h4 className="text-white font-bold mb-6 text-lg tracking-wide uppercase text-sm opacity-50">Product & Solutions</h4>
+                <div className="flex flex-col gap-8">
+                  <div>
+                    <h5 className="text-primary font-semibold mb-3">Product</h5>
+                    <ul className="flex flex-col gap-2.5">
+                      <li><Link href="#" className="text-white/70 hover:text-primary transition-colors">Semantic Search</Link></li>
+                      <li><Link href="#" className="text-white/70 hover:text-primary transition-colors">AI Chatbots</Link></li>
+                      <li><Link href="#" className="text-white/70 hover:text-primary transition-colors">AI Agents</Link></li>
+                      <li><Link href="#" className="text-white/70 hover:text-primary transition-colors">Analytics Intelligence</Link></li>
+                      <li><Link href="#" className="text-white/70 hover:text-primary transition-colors">Connectors & APIs</Link></li>
+                      <li><Link href="#" className="text-white/70 hover:text-primary transition-colors">Custom LLM Options</Link></li>
+                    </ul>
                   </div>
-                  <div className="flex gap-4">
-                    <Link href="" className="flex">
-                      <IconifyIconClient
-                        icon="tabler:brand-meta"
-                        className="size-5 text-white transform transition duration-300 hover:scale-110"
-                      />
-                    </Link>
-                    <Link href="" className="flex">
-                      <IconifyIconClient
-                        icon="tabler:brand-dribbble"
-                        className="size-5 text-white transform transition duration-300 hover:scale-110"
-                      />
-                    </Link>
-                    <Link href="" className="flex">
-                      <IconifyIconClient
-                        icon="tabler:brand-linkedin"
-                        className="size-5 text-white transform transition duration-300 hover:scale-110"
-                      />
-                    </Link>
-                    <Link href="" className="flex">
-                      <IconifyIconClient
-                        icon="tabler:brand-x"
-                        className="size-5 text-white transform transition duration-300 hover:scale-110"
-                      />
-                    </Link>
+                  <div>
+                    <h5 className="text-primary font-semibold mb-3">Solutions</h5>
+                    <ul className="flex flex-col gap-2.5">
+                      <li><Link href="#" className="text-white/70 hover:text-primary transition-colors">E-Commerce Search</Link></li>
+                      <li><Link href="#" className="text-white/70 hover:text-primary transition-colors">Headless Commerce</Link></li>
+                      <li><Link href="#" className="text-white/70 hover:text-primary transition-colors">Enterprise Knowledge Search</Link></li>
+                      <li><Link href="#" className="text-white/70 hover:text-primary transition-colors">AI-Powered Discovery</Link></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+
+              {/* Resources & Company Section */}
+              <div>
+                <h4 className="text-white font-bold mb-6 text-lg tracking-wide uppercase text-sm opacity-50">Resources & Company</h4>
+                <div className="flex flex-col gap-8">
+                  <div>
+                    <h5 className="text-primary font-semibold mb-3">Resources</h5>
+                    <ul className="flex flex-col gap-2.5">
+                      <li><Link href="#" className="text-white/70 hover:text-primary transition-colors">Documentation</Link></li>
+                      <li><Link href="#" className="text-white/70 hover:text-primary transition-colors">Developer Hub</Link></li>
+                      <li><Link href="#" className="text-white/70 hover:text-primary transition-colors">Integrations</Link></li>
+                      <li><Link href="#" className="text-white/70 hover:text-primary transition-colors">Security & Compliance</Link></li>
+                      <li><Link href="#" className="text-white/70 hover:text-primary transition-colors">Trust Center</Link></li>
+                      <li><Link href="#" className="text-white/70 hover:text-primary transition-colors">Blog</Link></li>
+                    </ul>
+                  </div>
+                  <div>
+                    <h5 className="text-primary font-semibold mb-3">Company</h5>
+                    <ul className="flex flex-col gap-2.5">
+                      <li><Link href="#" className="text-white/70 hover:text-primary transition-colors">About SparkVerse AI</Link></li>
+                      <li><Link href="#" className="text-white/70 hover:text-primary transition-colors">Research & Affiliations</Link></li>
+                      <li><Link href="#" className="text-white/70 hover:text-primary transition-colors">Contact Us</Link></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+
+              {/* Contact & Compliance Section */}
+              <div>
+                <h4 className="text-white font-bold mb-6 text-lg tracking-wide uppercase text-sm opacity-50">Contact & Compliance</h4>
+                <div className="flex flex-col gap-8">
+                  <div>
+                    <h5 className="text-primary font-semibold mb-3">Contact Us</h5>
+                    <div className="text-white/70 text-sm leading-relaxed mb-4">
+                      105 Washington Rd, Bradford,<br />United Kingdom
+                    </div>
+                    <ul className="flex flex-col gap-2.5">
+                      <li><Link href="tel:44740400835" className="text-white/70 hover:text-primary transition-colors">📞 (44) 7404 00835</Link></li>
+                      <li><Link href="mailto:info@sparkverse.ai" className="text-white/70 hover:text-primary transition-colors underline">📧 info@sparkverse.ai</Link></li>
+                    </ul>
+                  </div>
+                  <div>
+                    <h5 className="text-primary font-semibold mb-3">Compliance</h5>
+                    <ul className="flex flex-col gap-2.5">
+                      <li><Link href="#" className="text-white/70 hover:text-primary transition-colors">Privacy Policy</Link></li>
+                      <li><Link href="#" className="text-white/70 hover:text-primary transition-colors">Terms of Service</Link></li>
+                      <li><Link href="#" className="text-white/70 hover:text-primary transition-colors">Data Processing Agreement</Link></li>
+                      <li><Link href="#" className="text-white/70 hover:text-primary transition-colors">Security Overview</Link></li>
+                    </ul>
                   </div>
                 </div>
               </div>
             </div>
           </div>
-          <hr className="border-top mt-7.5 border-neutral-700 md:mt-15" />
-          <div className="flex justify-between pt-7.5 md:pt-10">
-            <div className="text-sm text-white">
-              © {currentYear}{' '}
-              <Link href="" className="underline">
-                SparkVerseAI.
-              </Link>
+
+          <hr className="border-white/10 mt-16 mb-10" />
+
+          {/* Bottom Footer */}
+          <div className="flex flex-col md:flex-row justify-between items-center gap-6 text-sm text-white/50">
+            <div>
+              ©{currentYear} <span className="text-white">SparkVerse AI</span>. All rights reserved.
             </div>
-            <div className="text-sm text-white">
-              Crafted with ❤️ By{' '}
-              <Link href="" className="underline">
-                Coderthemes
-              </Link>
+            <div className="flex gap-6">
+              <Link href="#" className="hover:text-primary transition-colors">Privacy</Link>
+              <Link href="#" className="hover:text-primary transition-colors">Terms</Link>
+              <Link href="#" className="hover:text-primary transition-colors">Security</Link>
             </div>
           </div>
         </div>

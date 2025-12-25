@@ -7,7 +7,7 @@ import IntegrateAnywhere from './component/IntegrateAnywhere';
 import AccelerateInnovation from './component/AccelerateInnovation';
 import HowItWorks from './component/HowItWorks';
 import CTA from './component/CTA';
-import Ecosystem from './component/Ecosystem';
+import KnowledgeHub from './component/KnowledgeHub';
 
 import { Metadata } from 'next';
 import SuccessStories from './component/SuccessStories';
@@ -20,13 +20,13 @@ const Page = () => {
   return (
     <>
       <Hero />
-      <Ecosystem />
       <CoreOfferings />
+      <KnowledgeHub />
       <SolutionsThatDrive />
       <Features />
       <IntegrateAnywhere />
-      <SuccessStories />
       <HowItWorks />
+      <SuccessStories />
       <AccelerateInnovation />
       <CTA />
     </>

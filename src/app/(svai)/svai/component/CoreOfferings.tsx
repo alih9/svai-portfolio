@@ -1,7 +1,14 @@
 'use client';
 
+import Image, { StaticImageData } from 'next/image';
 import React, { useState } from 'react';
 import IconifyIconClient from '@/component/IconifyIconClient';
+
+import AISearchImg from '@/assets/images/coreOfferings/AI Search.png';
+import ChatbotsImg from '@/assets/images/coreOfferings/Chatbots.png';
+import AgentsImg from '@/assets/images/coreOfferings/Agents.png';
+import AnalyticsImg from '@/assets/images/coreOfferings/Analytics Dashboard.png';
+import SecurityImg from '@/assets/images/coreOfferings/Secure & Hybrid Deployment.png';
 
 export interface FeatureItem {
   icon: string;
@@ -33,11 +40,11 @@ export const featuresData: FeatureItem[] = [
 
 const BulletList = ({ items }: { items: string[] }) => {
   return (
-    <div className="flex flex-col gap-5 mt-10">
+    <div className="flex flex-col gap-4 mt-6">
       {items.map(item => (
-        <div key={item} className="flex gap-2.5">
-          <IconifyIconClient icon="tabler:circle-check" className="size-6 text-black" />
-          <p>{item}</p>
+        <div key={item} className="flex items-start gap-2.5">
+          <IconifyIconClient icon="tabler:circle-check" className="size-5 text-primary mt-1 shrink-0" />
+          <p className="text-gray-700 leading-relaxed">{item}</p>
         </div>
       ))}
     </div>
@@ -48,6 +55,7 @@ type OfferingSection = {
   title: string;
   description: string;
   items: string[];
+  image: StaticImageData;
 };
 
 const coreOfferingSections: OfferingSection[] = [
@@ -55,6 +63,7 @@ const coreOfferingSections: OfferingSection[] = [
     title: 'SparkVerse Smart AI Search',
     description:
       'Deliver context-aware, intent-driven search that understands your customers like never before. Our hybrid semantic engine combines language intelligence with keyword precision to ensure fast, relevant results that drive conversions.',
+    image: AISearchImg,
     items: [
       'SparkVerse Semantic Intelligence',
       'Intent Detection & Context Understanding',
@@ -68,6 +77,7 @@ const coreOfferingSections: OfferingSection[] = [
     title: 'AI Chatbots',
     description:
       'Engage visitors instantly with assistants that simplify product discovery and guide customers through their journey. Understand intent, refine queries in real time, and recommend relevant products like a 24/7 sales rep.',
+    image: ChatbotsImg,
     items: [
       'Conversational Product Discovery',
       'Intent Detection & Context Understanding',
@@ -81,6 +91,7 @@ const coreOfferingSections: OfferingSection[] = [
     title: 'AI Agents',
     description:
       'Proactive, scenario-driven agents that monitor conditions, trigger alerts, automate reorders and analyze feedback to increase satisfaction and loyalty—hands-free.',
+    image: AgentsImg,
     items: [
       'Smart Purchase Alerts & Notifications',
       'Intent Detection & Context Understanding',
@@ -95,6 +106,7 @@ const coreOfferingSections: OfferingSection[] = [
     title: 'Analytics Dashboard',
     description:
       'Turn data into strategy with real-time insights from search, chatbots, and user behavior. Track performance, uncover trends, and optimize conversion throughout the journey.',
+    image: AnalyticsImg,
     items: [
       'Search & Query Analytics',
       'Intent Detection & Context Understanding',
@@ -108,6 +120,7 @@ const coreOfferingSections: OfferingSection[] = [
     title: 'Secure & Hybrid Deployments',
     description:
       ' Privacy-by-design architecture with total deployment freedom: SaaS or hybrid. Enforced by advanced controls, encryption, and compliance to protect users and your brand.',
+    image: SecurityImg,
     items: [
       'Role-Based Access Control (RBAC)',
       'End-To-End Encryption & Secure APIs',
@@ -130,10 +143,29 @@ const OfferingColumn = ({
 }) => {
   return (
     <div data-aos={aosDirection} data-aos-duration={600} data-aos-easing="ease-in-out">
-      <div className={`${bgClass} rounded-2xl lg:p-10 p-5 h-full`}>
-        <h3 className="lg:text-4xl mb-2.5 md:text-3.4xl text-2.6xl">{section.title}</h3>
-        <p className="mb-2.5">{section.description}</p>
-        <BulletList items={section.items} />
+      <div className={`${bgClass} rounded-3xl lg:p-12 p-6 shadow-sm border border-black/5`}>
+        <div className="grid lg:grid-cols-2 gap-10 items-center">
+          <div>
+            <h3 className="lg:text-4.5xl mb-4 md:text-3.5xl text-2.5xl font-semibold text-dark leading-tight">
+              {section.title}
+            </h3>
+            <p className="text-lg text-gray-600 mb-6 leading-relaxed">
+              {section.description}
+            </p>
+            <BulletList items={section.items} />
+          </div>
+          <div className="relative group overflow-hidden rounded-2xl">
+            <div className="bg-primary/5 absolute inset-0 transition-colors duration-500 group-hover:bg-primary/10" />
+            <Image
+              src={section.image}
+              alt={section.title}
+              width={800}
+              height={600}
+              className="w-full h-auto object-cover transition-transform duration-700 ease-out group-hover:scale-105"
+              placeholder="blur"
+            />
+          </div>
+        </div>
       </div>
     </div>
   );
@@ -149,7 +181,7 @@ const CoreOfferings = () => {
   return (
     <>
       <section
-        className="lg:pt-25 md:pt-22.5 pt-17.5 pb-12"
+        className="lg:pt-16 md:pt-12 pt-12 pb-12"
         data-aos="fade-up"
         data-aos-duration={700}
         data-aos-easing="ease-out-cubic"
@@ -157,7 +189,7 @@ const CoreOfferings = () => {
       >
         <div className="lg:mb-12.5 lg:mx-auto text-center lg:w-3/4 mb-7.5">
           <h2 className="mb-2.5 lg:text-5.5xl md:text-4.6xl text-3.4xl">
-            Core Capabilities Designed for Modern E-Commerce
+            Core Capabilities for Modern E-Commerce
           </h2>
          
         </div>

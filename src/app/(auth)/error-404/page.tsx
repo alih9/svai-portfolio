@@ -21,7 +21,7 @@ const Page = () => {
             <h1 className="md:text-5.6xl text-5.7xl">404</h1>
             <h2 className="mb-2.5 lg:text-5.5xl md:text-4.6xl text-3.4xl">Page Not Found </h2>
             <p className="mb-10">The page you are looking for doesn't exist or has been moved </p>
-            <Link href="/home-1">
+            <Link href="/svai">
               <button
                 type="submit"
                 className="md:h-14 w-full py-3.5 lg:px-7.5 px-6.5 text-center bg-primary font-medium rounded-2xl text-black transition-all duration-300 hover:text-primary hover:bg-dark"

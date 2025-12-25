@@ -55,7 +55,7 @@ const solutionsThatDriveData: SolutionsThatDriveType[] = [
     icon: Img14,
     title: 'Secure Flexible Deployment',
     description:
-      'SparkVerse AI gives you full control over your data with privacy-by-design deployment options. Whether you need SaaS or hybrid solutions, we provide the flexibility to meet your infrastructure needs while ensuring compliance with global security standards.',
+      'SparkVerse AI gives you full control over your data with privacy-by-design deployment options.',
     link: '#',
     linkText: 'View Deployments',
   },
@@ -103,9 +103,9 @@ const SolutionsThatDrive = () => {
               data-aos-easing="ease-in-out"
             >
               {solutionsThatDriveData.map((item, index) => (
-                <Link
-                  key={index}
-                  href={item.link}
+                <div
+                  // key={index}
+                  // href={item.link}
                   className="transition-transform duration-300 ease-in-out hover:-translate-y-1.5 mb-7.5"
                 >
                   <div className="bg-body-bg rounded-2xl lg:py-15 py-7.5 px-5 lg:mb-7.5 mb-2.5 md:mb-5 flex justify-center">
@@ -120,7 +120,7 @@ const SolutionsThatDrive = () => {
                       <IconifyIconClient icon="tabler:arrow-right" className="size-5 text-black" />
                     </div>
                   </div>
-                </Link>
+                </div>
               ))}
             </div>
           </div>

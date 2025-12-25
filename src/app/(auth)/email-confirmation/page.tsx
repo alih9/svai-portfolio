@@ -29,7 +29,7 @@ const Page = () => {
             </h2>
           </div>
           <div className="flex justify-between md:gap-5 md:flex-row gap-2.5 flex-col mt-7.5 items-center">
-            <Link href="/home-1">
+            <Link href="/svai">
               {' '}
               {/* Desktop/tablet — full wordmark */}
               <Image
