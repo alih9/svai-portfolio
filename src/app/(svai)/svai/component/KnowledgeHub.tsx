@@ -234,26 +234,36 @@ const KnowledgeHub = () => {
   }, []);
 
   return (
-    <section className="relative w-full bg-dark overflow-hidden text-white font-sans py-20">
+    <section className="relative w-full bg-dark overflow-hidden text-white font-sans py-32">
         {/* CSS Animations Styles */}
         <style dangerouslySetInnerHTML={{__html: `
             .bg-radial-custom {
                 background-image: radial-gradient(circle at 50% 40%, rgba(23, 169, 255, 0.1) 0%, #061d19 80%);
             }
             @keyframes flowData { 
-                from { stroke-dashoffset: 32; } 
+                from { stroke-dashoffset: 40; } 
                 to { stroke-dashoffset: 0; } 
             }
             .animate-flow {
-                animation: flowData 1.5s linear infinite;
+                animation: flowData 2s linear infinite;
+            }
+            @keyframes sparkMove {
+                0% { offset-distance: 0%; opacity: 0; }
+                10% { opacity: 1; }
+                90% { opacity: 1; }
+                100% { offset-distance: 100%; opacity: 0; }
+            }
+            .spark-circle {
+                offset-path: var(--path);
+                animation: sparkMove 3s infinite linear;
             }
             @keyframes pulseHeart {
-                0% { box-shadow: 0 0 40px rgba(23, 169, 255, 0.3); transform: translate(-50%, -50%) scale(1); }
-                50% { box-shadow: 0 0 80px rgba(23, 169, 255, 0.6); transform: translate(-50%, -50%) scale(1.05); }
-                100% { box-shadow: 0 0 40px rgba(23, 169, 255, 0.3); transform: translate(-50%, -50%) scale(1); }
+                0% { box-shadow: 0 0 40px rgba(23, 169, 255, 0.2); transform: scale(1); }
+                50% { box-shadow: 0 0 80px rgba(23, 169, 255, 0.5); transform: scale(1.05); }
+                100% { box-shadow: 0 0 40px rgba(23, 169, 255, 0.2); transform: scale(1); }
             }
             .animate-heartbeat {
-                animation: pulseHeart 3s infinite ease-in-out;
+                animation: pulseHeart 4s infinite ease-in-out;
             }
         `}} />
 
@@ -268,20 +278,27 @@ const KnowledgeHub = () => {
         {/* SVG Layer for lines (Desktop only usually, or handled responsively) */}
         <svg className="absolute inset-0 w-full h-full pointer-events-none z-0 hidden lg:block">
             {lines.map(line => (
-                <line 
-                    key={line.id}
-                    x1={line.x1} y1={line.y1}
-                    x2={line.x2} y2={line.y2}
-                    className="stroke-primary stroke-2 opacity-40"
-                    strokeDasharray="8 8"
-                >
-                    <animate 
-                        attributeName="stroke-dashoffset" 
-                        from="32" to="0" 
-                        dur="1.5s" 
-                        repeatCount="indefinite" 
-                    />
-                </line>
+                <g key={line.id}>
+                    <line 
+                        x1={line.x1} y1={line.y1}
+                        x2={line.x2} y2={line.y2}
+                        className="stroke-primary/20 stroke-2"
+                        strokeDasharray="8 12"
+                    >
+                        <animate 
+                            attributeName="stroke-dashoffset" 
+                            from="40" to="0" 
+                            dur="2s" 
+                            repeatCount="indefinite" 
+                        />
+                    </line>
+                    {/* Animated Spark */}
+                    <circle r="3" className="fill-primary" style={{
+                      offsetPath: `path('M ${line.x1} ${line.y1} L ${line.x2} ${line.y2}')`,
+                      animation: `sparkMove ${2 + Math.random()}s infinite linear`,
+                      animationDelay: `${Math.random() * 2}s`
+                    }} />
+                </g>
             ))}
         </svg>
 

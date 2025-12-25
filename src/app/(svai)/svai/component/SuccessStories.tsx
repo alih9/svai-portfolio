@@ -9,7 +9,7 @@ const SuccessStories = () => {
   return (
     <>
       <section
-        className="lg:py-25 md:py-22.5 py-17.5"
+        className="lg:py-32 md:py-24 py-16"
         data-aos="fade-up"
         data-aos-duration="700"
         data-aos-easing="ease-out-cubic"
@@ -39,11 +39,11 @@ const SuccessStories = () => {
             >
               <Image src={Story2} alt="Story 1" className="size-full object-cover" />
 
-              <div className="absolute inset-0 w-full h-full opacity-80 z-20 bg-linear-180  from-transparent to-black"></div>
+              <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent z-10"></div>
 
-              <div className="absolute lg:p-7.5 p-5 h-full flex flex-col items-start justify-between z-20">
-                <>&nbsp;</>
-                <h3 className="text-white text-xl">
+              <div className="absolute bottom-0 left-0 lg:p-10 p-6 z-20 w-full">
+                <p className="text-primary font-bold text-xs uppercase tracking-widest mb-3">Case Study</p>
+                <h3 className="text-white text-2xl font-bold leading-tight">
                   Context-Aware Search Enhancement for a Luxury Fashion Retailer.
                 </h3>
               </div>
@@ -57,11 +57,11 @@ const SuccessStories = () => {
               data-aos-easing="ease-in-out"
             >
               <Image src={Story3} alt="Story 3" className="size-full object-cover" />
-              <div className="absolute inset-0 w-full h-full opacity-80 z-20 bg-linear-180  from-transparent to-black"></div>{' '}
-              <>&nbsp;</>
-              <div className="absolute lg:p-7.5 p-5 h-full flex flex-col items-start justify-between z-20">
-                <>&nbsp;</>
-                <h3 className="text-white text-xl">
+              <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent z-10"></div>
+              
+              <div className="absolute bottom-0 left-0 lg:p-10 p-6 z-20 w-full">
+                <p className="text-primary font-bold text-xs uppercase tracking-widest mb-3">Innovation</p>
+                <h3 className="text-white text-2xl font-bold leading-tight">
                   Unified Product Knowledge Graph for a B2B Industrial Supplier
                 </h3>
               </div>
@@ -76,12 +76,12 @@ const SuccessStories = () => {
             >
               <Image src={Story1} alt="Story 2" className="size-full object-cover" />
 
-              <div className="absolute inset-0 w-full h-full opacity-80 z-20 bg-linear-180  from-transparent to-black"></div>
+              <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent z-10"></div>
 
-              <div className="absolute lg:p-7.5 p-5 h-full flex flex-col items-start justify-between z-20">
-                <>&nbsp;</>
-                <h3 className="text-white text-xl">
-                  "Person she control of to beginnings view looked eyes Than continues."{' '}
+              <div className="absolute bottom-0 left-0 lg:p-10 p-6 z-20 w-full">
+                <p className="text-primary font-bold text-xs uppercase tracking-widest mb-3">Enterprise</p>
+                <h3 className="text-white text-2xl font-bold leading-tight">
+                  Real-Time Inventory Intelligence for a Global Logistics Platform
                 </h3>
               </div>
             </div>

@@ -4,38 +4,47 @@ import React from 'react';
 const CTA = () => {
   return (
     <>
-      <section className="bg-white lg:py-25 md:py-22.5 py-17.5">
+      <section className="bg-white lg:py-32 md:py-24 py-16">
         <div className="container">
-          <div className="bg-body-bg lg:py-17.5 lg:px-3.75 md:py-10 md:px-3.75 py-5 px-3.75 rounded-2xl">
+          <div className="relative overflow-hidden bg-dark lg:py-20 lg:px-12 md:py-16 md:px-8 py-12 px-6 rounded-[2rem] shadow-2xl">
+            {/* Background Accents */}
+            <div className="absolute top-0 right-0 w-64 h-64 bg-primary/10 rounded-full blur-3xl -mr-32 -mt-32"></div>
+            <div className="absolute bottom-0 left-0 w-64 h-64 bg-primary/5 rounded-full blur-3xl -ml-32 -mb-32"></div>
+
             <div
-              className="md:mx-auto md:w-7/10 text-center"
+              className="relative z-10 mx-auto max-w-3xl text-center"
               data-aos="fade-up"
               data-aos-delay={150}
               data-aos-duration={600}
               data-aos-easing="ease-in-out"
             >
-              <h2 className="lg:text-4xl md:text-[32px] text-2xl">Stay Ahead with SparkVerse AI</h2>
-              <div className="mt-5 lg:mb-3.75">
-                Get product updates and insights on intelligent e-commerce. 
-              </div>
-              <div>
-                <form className="flex md:gap-5 md:flex-row gap-2.5 flex-col justify-between">
-                  <div className="flex flex-col gap-2.5 w-3/4 justify-start items-start">
+              <h2 className="lg:text-5xl md:text-4xl text-3xl font-bold text-white mb-6">
+                Stay Ahead with SparkVerse AI
+              </h2>
+              <p className="text-white/70 text-lg mb-10 max-w-xl mx-auto">
+                Join our community of forward-thinking retailers. Get product updates and insights on the future of intelligent e-commerce.
+              </p>
+              
+              <div className="max-w-md mx-auto">
+                <form className="flex flex-col sm:flex-row gap-4">
+                  <div className="flex-grow">
                     <input
-                      className="py-2.5 px-5 rounded-2xl w-full bg-white border-neutral-200 h-14"
+                      type="email"
+                      className="w-full h-14 py-2.5 px-6 rounded-2xl bg-white/5 border border-white/10 text-white placeholder:text-white/30 focus:outline-none focus:border-primary/50 transition-colors"
                       placeholder="info@example.com"
+                      required
                     />
-                    <p className="italic">No spam. Your privacy comes first.  </p>
-                  </div>{' '}
-                  <div className="text-center ">
-                    <Link
-                      href=""
-                      className="md:h-14 py-3.5 px-7.5 inline-flex items-center text-center bg-dark font-medium rounded-2xl text-white transition-all duration-300 hover:text-primary"
-                    >
-                      Join the Waitlist
-                    </Link>
                   </div>
+                  <button
+                    type="submit"
+                    className="h-14 px-10 bg-primary hover:bg-white text-dark font-bold rounded-2xl transition-all duration-300 whitespace-nowrap"
+                  >
+                    Join Waitlist
+                  </button>
                 </form>
+                <p className="mt-4 text-white/40 text-sm italic">
+                  No spam. Your privacy comes first.
+                </p>
               </div>
             </div>
           </div>

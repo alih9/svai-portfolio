@@ -41,7 +41,7 @@ const IntegrateAnywhere = () => {
   return (
     <>
       <section
-        className="bg-white lg:py-25 md:py-22.5 py-17.5"
+        className="bg-white lg:py-32 md:py-24 py-16"
         data-aos="fade-up"
         data-aos-duration={700}
         data-aos-easing="ease-out-cubic"

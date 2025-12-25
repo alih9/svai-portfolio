@@ -45,7 +45,7 @@ const HowItWorks = () => {
   return (
     <>
       <section
-        className="bg-dark lg:py-25 py-17.5"
+        className="bg-dark lg:py-32 md:py-24 py-16"
         data-aos="fade-up"
         data-aos-duration={700}
         data-aos-easing="ease-out-cubic"
@@ -61,13 +61,12 @@ const HowItWorks = () => {
             <div className="bg-primary py-0.5 px-3.75 rounded-full font-medium text-sm inline-flex text-dark mb-2.5">
               How It Works
             </div>
-            <h2 className="mb-2.5 lg:text-5.5xl md:text-4.6xl text-3.4xl text-white">
+            <h2 className="mb-6 lg:text-5xl md:text-4xl text-3xl font-bold text-white max-w-4xl mx-auto leading-tight">
               From raw data to intelligent discovery: in five steps.
             </h2>
-            <p className="text-base text-white/80 md:w-3/5 mx-auto">
+            <p className="text-xl text-white/70 md:w-3/5 mx-auto leading-relaxed">
               Our End-to-End Product Knowledge Intelligence Engine transforms scattered,
-              inconsistent data into a secure, context-aware knowledge network that powers accurate
-              search and actionable insights.
+              inconsistent data into a secure, context-aware knowledge network.
             </p>
           </div>
           <div
@@ -92,7 +91,7 @@ const HowItWorks = () => {
             </div>
 
             <div className="relative">
-              <div className="absolute start-7.5 h-11/12 w-0.75 bg-neutral-100/20" />
+              <div className="absolute start-7.5 h-full w-0.5 bg-gradient-to-b from-primary/50 via-primary/10 to-transparent" />
               <div className="relative z-10">
                 {userStepsData.map((step, index) => (
                   <div
@@ -102,9 +101,9 @@ const HowItWorks = () => {
                     data-aos-duration={600}
                     data-aos-easing="ease-in-out"
                   >
-                    <div className="flex-shrink-1">
-                      <div className="size-15 bg-primary rounded-full inline-flex items-center justify-center">
-                        <h5 className="lg:text-1.5xl text-2.5xl">{step.number}</h5>
+                    <div className="flex-shrink-0">
+                      <div className="size-16 bg-primary/10 border border-primary/30 rounded-full inline-flex items-center justify-center shadow-[0_0_20px_rgba(23,169,255,0.15)] transition-transform group-hover:scale-110">
+                        <h5 className="text-primary font-bold text-xl">{step.number}</h5>
                       </div>
                     </div>
                     <div>

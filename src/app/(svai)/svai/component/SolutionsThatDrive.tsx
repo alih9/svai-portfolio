@@ -73,7 +73,7 @@ const SolutionsThatDrive = () => {
   return (
     <>
       <section
-        className="bg-white lg:py-25 md:py-22.5 py-17.5 "
+        className="bg-white lg:py-32 md:py-24 py-16"
         data-aos="fade-up"
         data-aos-duration="700"
         data-aos-easing="ease-out-cubic"
@@ -94,9 +94,8 @@ const SolutionsThatDrive = () => {
               product discovery, customer experience, and operational efficiency.
             </p>
           </div>
-          <div className="container mt-6 lg:mt-12">
             <div
-              className="grid md:grid-cols-3 lg:gap-7.5 gap-5"
+              className="mt-4 grid md:grid-cols-2 lg:grid-cols-3 gap-8 "
               data-aos="fade-up"
               data-aos-delay={200}
               data-aos-duration={600}
@@ -104,26 +103,37 @@ const SolutionsThatDrive = () => {
             >
               {solutionsThatDriveData.map((item, index) => (
                 <div
-                  // key={index}
-                  // href={item.link}
-                  className="transition-transform duration-300 ease-in-out hover:-translate-y-1.5 mb-7.5"
+                  key={index}
+                  className="group relative flex flex-col h-full bg-white rounded-2xl p-8 border border-neutral-100 shadow-sm hover:shadow-xl hover:border-primary/20 transition-all duration-500 hover:-translate-y-2"
                 >
-                  <div className="bg-body-bg rounded-2xl lg:py-15 py-7.5 px-5 lg:mb-7.5 mb-2.5 md:mb-5 flex justify-center">
-                    <Image src={item.icon} alt={item.title} className="lg:size-15 size-12.5" />
+                  {/* Subtle Icon Background */}
+                  <div className="w-16 h-16 bg-neutral-50 group-hover:bg-primary/10 rounded-2xl flex items-center justify-center mb-8 transition-colors duration-500">
+                    <Image src={item.icon} alt={item.title} className="size-10" />
                   </div>
-                  <div>
-                    <h2 className="mb-2.5 md:text-2.5xl text-1.5xl">{item.title}</h2>
-                    <p className="md:mb-5 mb-2.5">{item.description}</p>
-                    <div className="flex items-center gap-1.25 underline">
-                      <div className="text-black hidden lg:block">{item.linkText}</div>
-                      <div className="text-black lg:hidden">View details</div>
-                      <IconifyIconClient icon="tabler:arrow-right" className="size-5 text-black" />
+                  
+                  <div className="flex flex-col flex-grow">
+                    <h3 className="text-2xl font-bold mb-4 group-hover:text-primary transition-colors duration-300">
+                      {item.title}
+                    </h3>
+                    <p className="text-neutral-600 mb-8 flex-grow leading-relaxed">
+                      {item.description}
+                    </p>
+                    
+                    <div className="mt-auto">
+                      <Link 
+                        href={item.link} 
+                        className="inline-flex items-center gap-2 font-semibold text-dark hover:text-primary transition-colors"
+                      >
+                        <span className="border-b-2 border-transparent hover:border-primary transition-all">
+                          {item.linkText}
+                        </span>
+                        <IconifyIconClient icon="tabler:arrow-right" className="size-5 transform group-hover:translate-x-1 transition-transform" />
+                      </Link>
                     </div>
                   </div>
                 </div>
               ))}
             </div>
-          </div>
         </div>
       </section>
     </>
