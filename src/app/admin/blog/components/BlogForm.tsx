@@ -5,7 +5,7 @@ import { createClient } from '@/utils/supabase/client';
 import { useRouter } from 'next/navigation';
 import { useState, ChangeEvent } from 'react';
 import Image from 'next/image';
-import RichTextEditor from './RichTextEditor';
+import LexicalEditorWrapper from './LexicalEditorWrapper';
 
 type BlogFormProps = {
   initialData?: {
@@ -125,7 +125,8 @@ export default function BlogForm({ initialData }: BlogFormProps) {
   };
 
   return (
-    <form onSubmit={handleSubmit} className="space-y-6 max-w-4xl mx-auto bg-white p-8 rounded-2xl shadow-sm border border-gray-100 font-body">
+
+      <form onSubmit={handleSubmit} className="space-y-6  mx-auto bg-white p-8 rounded-2xl shadow-sm border border-gray-100 font-body">
         {error && (
             <div className="bg-red-50 text-red-600 p-4 rounded-lg">
                 {error}
@@ -210,10 +211,12 @@ export default function BlogForm({ initialData }: BlogFormProps) {
 
       <div>
         <label className="block text-sm font-semibold text-dark mb-2">Content</label>
-        <RichTextEditor 
-            content={formData.content} 
-            onChange={(html) => setFormData({ ...formData, content: html })} 
-        />
+        <div className="border border-gray-300 rounded-xl overflow-hidden focus-within:ring-2 focus-within:ring-primary/20 focus-within:border-primary transition-all">
+          <LexicalEditorWrapper 
+              content={formData.content} 
+              onChange={(html) => setFormData({ ...formData, content: html })} 
+          />
+        </div>
         <p className="text-xs text-gray-500 mt-2">Use the editor to format your post.</p>
       </div>
 
