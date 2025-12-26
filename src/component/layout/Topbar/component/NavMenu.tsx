@@ -19,56 +19,57 @@ const NavMenu = () => {
   };
 
   return (
-    <div id="navbar" className="lg:flex hidden justify-center gap-5 relative z-50">
-      {navMenuData.map((item, idx) => {
-        let isActive = false;
+    <nav id="navbar" aria-label="Main Navigation" className="lg:flex hidden justify-center relative z-50">
+      <ul className="flex items-center gap-5 list-none m-0 p-0">
+        {navMenuData.map((item, idx) => {
+          let isActive = false;
 
-        if (item.href && pathname === item.href) {
-          isActive = true;
-        } else if (item.type === 'link' && item.children) {
-          isActive = item.children.some(child => pathname.startsWith(child.href));
-        } else if (item.type === 'image' && item.children) {
-          isActive = item.children.some(child => pathname.startsWith(child.href));
-        } else if (item.type === 'mega' && item.columns) {
-          isActive = item.columns.some(col =>
-            col.links.some(link => pathname.startsWith(link.href))
-          );
-        }
+          if (item.href && pathname === item.href) {
+            isActive = true;
+          } else if (item.type === 'link' && item.children) {
+            isActive = item.children.some(child => pathname.startsWith(child.href));
+          } else if (item.type === 'image' && item.children) {
+            isActive = item.children.some(child => pathname.startsWith(child.href));
+          } else if (item.type === 'mega' && item.columns) {
+            isActive = item.columns.some((col: any) =>
+              col.links.some((link: any) => pathname.startsWith(link.href))
+            );
+          }
 
-        if (item.href) {
+          if (item.href) {
+            return (
+              <li key={idx}>
+                <Link
+                  href={item.href}
+                  className="flex items-center text-dark text-base py-1.25 font-medium"
+                >
+                  <span className={isActive ? 'underline' : ''}>{item.title}</span>
+                </Link>
+              </li>
+            );
+          }
+
           return (
-            <Link
+            <li
               key={idx}
-              href={item.href}
-              className="flex items-center text-dark text-base py-1.25 font-medium"
+              className="relative"
+              onMouseEnter={() => setHoveredIndex(idx)}
+              onMouseLeave={() => setHoveredIndex(null)}
             >
-              <span className={isActive ? 'underline' : ''}>{item.title}</span>
-            </Link>
-          );
-        }
+              <button
+                type="button"
+                onClick={() => handleClick(idx)}
+                className="cursor-pointer text-dark flex items-center py-2.5 font-medium gap-1"
+              >
+                <span className={isActive ? 'underline' : ''}>{item.title}</span>
+                <IconifyIconClient icon="tabler:chevron-down" className="w-4 h-4 text-dark" />
+              </button>
 
-        return (
-          <div
-            key={idx}
-            className="relative"
-            onMouseEnter={() => setHoveredIndex(idx)}
-            onMouseLeave={() => setHoveredIndex(null)}
-          >
-            <button
-              type="button"
-              onClick={() => handleClick(idx)}
-              className="cursor-pointer text-dark flex items-center py-2.5 font-medium gap-1"
-            >
-              <span className={isActive ? 'underline' : ''}>{item.title}</span>
-              <IconifyIconClient icon="tabler:chevron-down" className="w-4 h-4 text-dark" />
-            </button>
-
-            {isDropdownOpen(idx) && (
-              <>
-                {item.type === 'link' && item.children && (
-                  <div className="absolute left-0 top-full mt-2 w-60 bg-white border border-neutral-200 rounded-2xl shadow-lg z-50">
-                    <div className="p-5">
-                      {item.children.map((link, i) => (
+              {isDropdownOpen(idx) && (
+                <div role="menu" className="absolute left-0 top-full mt-2 w-max bg-white border border-neutral-200 rounded-2xl shadow-lg z-50 overflow-hidden">
+                  {item.type === 'link' && item.children && (
+                    <div className="p-5 min-w-60">
+                      {item.children.map((link: any, i: number) => (
                         <Link
                           key={i}
                           href={link.href}
@@ -85,19 +86,17 @@ const NavMenu = () => {
                         </Link>
                       ))}
                     </div>
-                  </div>
-                )}
+                  )}
 
-                {item.type === 'image' && item.children && (
-                  <div className="absolute left-0 top-full mt-2 w-[560px] bg-white border border-neutral-200 rounded-2xl shadow-lg z-50">
-                    <div className="grid grid-cols-2 gap-5 p-5">
+                  {item.type === 'image' && item.children && (
+                    <div className="grid grid-cols-2 gap-5 p-5 w-[560px]">
                       <div>
                         {item.image && (
-                          <Image src={item.image} alt="Element" className="rounded-2xl w-full" />
+                          <Image src={item.image} alt="Element" className="rounded-2xl w-full" width={280} height={200} />
                         )}
                       </div>
                       <div className="flex flex-col justify-center gap-2.5 py-5">
-                        {item.children.map((link, i) => (
+                        {item.children.map((link: any, i: number) => (
                           <Link
                             key={i}
                             href={link.href}
@@ -119,15 +118,13 @@ const NavMenu = () => {
                         ))}
                       </div>
                     </div>
-                  </div>
-                )}
+                  )}
 
-                {item.type === 'mega' && item.columns && (
-                  <div className="absolute left-0 top-full mt-2 w-[560px] bg-white border border-neutral-200 rounded-2xl shadow-lg z-50">
-                    <div className="grid grid-cols-3 gap-10 p-5">
-                      {item.columns.map((col, cIdx) => (
+                  {item.type === 'mega' && item.columns && (
+                    <div className="grid grid-cols-3 gap-10 p-5 w-[560px]">
+                      {item.columns.map((col: any, cIdx: number) => (
                         <div key={cIdx}>
-                          {col.links.map((link, lIdx) => (
+                          {col.links.map((link: any, lIdx: number) => (
                             <Link
                               key={lIdx}
                               href={link.href}
@@ -142,14 +139,14 @@ const NavMenu = () => {
                         </div>
                       ))}
                     </div>
-                  </div>
-                )}
-              </>
-            )}
-          </div>
-        );
-      })}
-    </div>
+                  )}
+                </div>
+              )}
+            </li>
+          );
+        })}
+      </ul>
+    </nav>
   );
 };
 

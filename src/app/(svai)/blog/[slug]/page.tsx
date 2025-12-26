@@ -17,7 +17,7 @@ export async function generateMetadata({ params }: Props) {
   const supabase = await createClient();
   const { data: blog } = await supabase
     .from('blogs')
-    .select('title, description, keywords, image_url')
+    .select('title, description, keywords, image_url, created_at, updated_at, author') // Added date fields if available, verified schema earlier had created_at
     .eq('slug', slug)
     .single();
 
@@ -27,21 +27,38 @@ export async function generateMetadata({ params }: Props) {
     };
   }
 
+  const url = `https://www.sparkverse.ai/blog/${slug}`;
+  const ogImage = blog.image_url || '/Logos/PNG/FINAL LOGO-02.png';
+
   return {
     title: `${blog.title} | SparkVerseAI`,
     description: blog.description,
     keywords: blog.keywords ? blog.keywords.split(',').map((k: string) => k.trim()) : [],
+    alternates: {
+      canonical: url,
+    },
     openGraph: {
+      type: 'article',
+      url,
       title: blog.title,
       description: blog.description,
-      images: blog.image_url ? [{ url: blog.image_url }] : [],
+      publishedTime: blog.created_at,
+      modifiedTime: blog.updated_at || blog.created_at,
+      images: [
+        {
+          url: ogImage,
+          width: 1200,
+          height: 630,
+          alt: blog.title,
+        },
+      ],
     },
     twitter: {
-        card: 'summary_large_image',
-        title: blog.title,
-        description: blog.description,
-        images: blog.image_url ? [blog.image_url] : [],
-    }
+      card: 'summary_large_image',
+      title: blog.title,
+      description: blog.description,
+      images: [ogImage],
+    },
   };
 }
 
@@ -60,8 +77,38 @@ const BlogDetailsPage = async ({ params }: Props) => {
     notFound();
   }
 
+  const jsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'BlogPosting',
+    headline: blog.title,
+    description: blog.description,
+    image: blog.image_url ? [blog.image_url] : ['https://www.sparkverse.ai/Logos/PNG/FINAL%20LOGO-02.png'],
+    datePublished: blog.created_at,
+    dateModified: blog.updated_at || blog.created_at,
+    author: {
+      '@type': 'Person',
+      name: blog.author || 'SparkVerseAI Team',
+    },
+    publisher: {
+      '@type': 'Organization',
+      name: 'SparkVerseAI',
+      logo: {
+        '@type': 'ImageObject',
+        url: 'https://www.sparkverse.ai/Logos/PNG/FINAL%20LOGO-02.png',
+      },
+    },
+    mainEntityOfPage: {
+      '@type': 'WebPage',
+      '@id': `https://www.sparkverse.ai/blog/${slug}`,
+    },
+  };
+
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
       <section className="bg-white lg:py-25 md:py-12.5 py-7.5">
         <div className="container-small">
           <div data-aos="fade-up" data-aos-duration={500} data-aos-easing="ease-in-out">

@@ -6,7 +6,9 @@ const HomeLayout = ({ children }: Readonly<{ children: ReactNode }>) => {
   return (
     <>
       <Topbar />
-      {children}
+      <main id="main-content">
+        {children}
+      </main>
       <Footer />
     </>
   );

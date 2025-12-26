@@ -98,7 +98,7 @@ const Footer = () => {
                     <ul className="flex flex-col gap-2.5">
                       <li><Link href="#" className="text-white/70 hover:text-primary transition-colors">About SparkVerse AI</Link></li>
                       <li><Link href="#" className="text-white/70 hover:text-primary transition-colors">Research & Affiliations</Link></li>
-                      <li><Link href="#" className="text-white/70 hover:text-primary transition-colors">Contact Us</Link></li>
+                      <li><Link href="/contact-us" className="text-white/70 hover:text-primary transition-colors">Contact Us</Link></li>
                     </ul>
                   </div>
                 </div>
