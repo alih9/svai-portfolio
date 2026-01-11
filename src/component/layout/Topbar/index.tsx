@@ -30,7 +30,7 @@ const Topbar = () => {
         <div className="container">
           <div className="flex items-center justify-between py-2.5 lg:py-4.5">
             <div className="text-lg font-bold">
-              <Link href="/svai">
+              <Link href="/">
                 {/* Desktop/tablet — full wordmark */}
                 <Image
                   src="/Logos/PNG/FINAL LOGO-01.png"
