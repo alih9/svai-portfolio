@@ -24,7 +24,7 @@ const Features = () => {
             </div>
             <div data-aos="fade-left" data-aos-duration={500} data-aos-easing="ease-in-out">
               <div className="md:mb-12.5 mb-7.5">
-                <h1 className="lg:text-6xl md:text-5.5xl text-4xl mb-2.5">Robust analytics</h1>
+                <h2 className="lg:text-6xl md:text-5.5xl text-4xl mb-2.5 text-black font-bold">Robust analytics</h2>
                 <p className="mb-2.5">
                   Gain valuable insights with our powerful analytics tools.Track key
                   metrics,generate detailed reports, and make data-driven decisions to drive your

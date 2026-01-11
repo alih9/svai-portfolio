@@ -2,6 +2,7 @@
 import { createServerClient } from '@supabase/ssr'
 import { cookies } from 'next/headers'
 
+// For use in Server Components/Actions that need auth
 export async function createClient() {
   const cookieStore = await cookies()
 
@@ -20,9 +21,25 @@ export async function createClient() {
             )
           } catch {
             // The `setAll` method was called from a Server Component.
-            // This can be ignored if you have middleware refreshing
-            // user sessions.
           }
+        },
+      },
+    }
+  )
+}
+
+// For use in generateStaticParams or other contexts without request scope
+export function createStaticClient() {
+  return createServerClient(
+    process.env.NEXT_PUBLIC_SUPABASE_URL!,
+    process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY!,
+    {
+      cookies: {
+        getAll() {
+          return []
+        },
+        setAll(cookiesToSet) {
+          // No-op
         },
       },
     }

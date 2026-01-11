@@ -17,7 +17,7 @@ export const metadata: Metadata = {
   description:
     'Turn fragmented data into intelligent action with SparkVerseAI. The privacy-first semantic search and intelligent experience platform for modern commerce.',
   alternates: {
-    canonical: 'https://www.sparkverse.ai/svai',
+    canonical: 'https://www.sparkverse.ai',
   },
   openGraph: {
     title: 'SparkVerseAI - Intelligent Knowledge Hub',

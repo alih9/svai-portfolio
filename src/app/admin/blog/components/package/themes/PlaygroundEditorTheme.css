@@ -30,8 +30,9 @@
 .PlaygroundEditorTheme__h1 {
   font-size: 24px;
   color: rgb(5, 5, 5);
-  font-weight: 400;
+  font-weight: 700;
   margin: 0;
+  font-family: 'Cabinet Grotesk', sans-serif;
 }
 .PlaygroundEditorTheme__h2 {
   font-size: 15px;
@@ -39,11 +40,13 @@
   font-weight: 700;
   margin: 0;
   text-transform: uppercase;
+  font-family: 'Cabinet Grotesk', sans-serif;
 }
 .PlaygroundEditorTheme__h3 {
   font-size: 12px;
   margin: 0;
   text-transform: uppercase;
+  font-family: 'Cabinet Grotesk', sans-serif;
 }
 .PlaygroundEditorTheme__indent {
   --lexical-indent-base-value: 40px;

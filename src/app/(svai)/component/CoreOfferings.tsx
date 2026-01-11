@@ -207,7 +207,7 @@ const CoreOfferings = () => {
                   key={tab.label}
                   type="button"
                   onClick={() => setActiveIndex(index)}
-                  className={`relative rounded-full px-4 py-2 text-sm md:text-base transition-all duration-300 ${
+                  className={`relative rounded-full px-4 py-2 text-sm md:text-base transition-all duration-0 ${
                     isActive
                       ? 'bg-primary text-dark shadow-[0_10px_30px_rgba(0,0,0,0.25)]'
                       : 'bg-transparent text-dark/70 hover:text-dark hover:bg-body-bg'

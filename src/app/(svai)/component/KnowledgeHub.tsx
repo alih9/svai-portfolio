@@ -10,7 +10,7 @@ type KnowledgeHubNode = {
   id: string; // Unique ID for finding element
   title: string;
   description?: string;
-  tags: { label: string; className: string }[]; // className helps us map the specific colors
+  tags: { label: string; className: string; showOnMain?: boolean }[]; // className helps us map the specific colors
   icon: string;
   headerIconUrl?: string; // If we needed custom SVGs, but we'll use Iconify for consistency
   headerBg?: string; // Background for the icon box
@@ -23,64 +23,85 @@ type KnowledgeHubNode = {
  * Mapping colors from the original HTML to arbitrary Tailwind values or styles.
  */
 
-// Ingest Sources
 const ingestSources: KnowledgeHubNode[] = [
   {
     id: 'sat-in-1',
     title: 'File-Based Sources',
-    // description: 'Ingest structured and unstructured data from local or network file systems.',
     icon: 'solar:document-add-linear',
     desktopPos: 'top-[0%] left-1/2 -translate-x-1/2',
     tags: [
-      { label: 'CSV Files', className: 'text-emerald-400 border-emerald-400/30 bg-emerald-400/10' },
-      { label: 'TSV Files', className: 'text-emerald-400 border-emerald-400/30 bg-emerald-400/10' },
+      { label: 'CSV Files', className: 'text-emerald-400 border-emerald-400/30 bg-emerald-400/10', showOnMain: true },
+      { label: 'TSV Files', className: 'text-emerald-400 border-emerald-400/30 bg-emerald-400/10', showOnMain: true },
+      { label: 'JSON Files', className: 'text-yellow-400 border-yellow-400/30 bg-yellow-400/10' },
+      { label: 'XML Files', className: 'text-orange-400 border-orange-400/30 bg-orange-400/10' },
+      { label: 'Excel Files', className: 'text-green-500 border-green-500/30 bg-green-500/10' },
+      { label: 'Text Files', className: 'text-gray-400 border-gray-400/30 bg-gray-400/10' },
     ],
   },
+
+  
   {
     id: 'sat-in-2',
     title: 'Custom Connectors',
-    // description: 'Connect proprietary systems using API, SDK, or standard protocols.',
     icon: 'solar:plug-circle-linear',
     desktopPos: 'top-[8%] right-[10%] translate-x-0',
     tags: [
-      { label: 'Custom Connectors', className: 'text-sky-400 border-sky-400/30 bg-sky-400/10' },
-      { label: 'API / SDK', className: 'text-purple-400 border-purple-400/30 bg-purple-400/10' },
+      { label: 'Custom Connectors', className: 'text-sky-400 border-sky-400/30 bg-sky-400/10', showOnMain: true },
+      { label: 'API / SDK', className: 'text-purple-400 border-purple-400/30 bg-purple-400/10', showOnMain: true },
+      { label: 'Webhooks', className: 'text-red-400 border-red-400/30 bg-red-400/10' },
+      { label: 'JDBC / ODBC', className: 'text-amber-600 border-amber-600/30 bg-amber-600/10' },
     ],
   },
   {
     id: 'sat-in-3',
     title: 'Cloud & Storage',
-    // description: 'Securely access data stored in major cloud providers.',
     icon: 'solar:cloud-storage-linear',
     desktopPos: 'top-[33%] right-[5%] translate-x-0',
     tags: [
-      { label: 'AWS S3', className: 'text-amber-400 border-amber-400/30 bg-amber-400/10' },
-      { label: 'GCS', className: 'text-blue-400 border-blue-400/30 bg-blue-400/10' },
-      { label: 'Azure Blob', className: 'text-sky-400 border-sky-400/30 bg-sky-400/10' },
+      { label: 'AWS S3', className: 'text-amber-400 border-amber-400/30 bg-amber-400/10', showOnMain: true },
+      { label: 'GCS', className: 'text-blue-400 border-blue-400/30 bg-blue-400/10', showOnMain: true },
+      { label: 'Azure Blob', className: 'text-sky-400 border-sky-400/30 bg-sky-400/10' , showOnMain: true },
+      { label: 'Azure File Storage', className: 'text-sky-500 border-sky-500/30 bg-sky-500/10' },
+      { label: 'SharePoint', className: 'text-blue-600 border-blue-600/30 bg-blue-600/10' },
+      { label: 'OneDrive', className: 'text-blue-500 border-blue-500/30 bg-blue-500/10' },
+      { label: 'Dropbox', className: 'text-blue-400 border-blue-400/30 bg-blue-400/10' },
+      { label: 'Box Storage', className: 'text-blue-700 border-blue-700/30 bg-blue-700/10' },
     ],
   },
   {
     id: 'sat-in-4',
     title: 'Databases',
-    // description: 'Directly sync with transactional and analytical databases.',
     icon: 'solar:database-linear',
     desktopPos: 'top-[33%] left-[5%] translate-x-0',
     tags: [
-      { label: 'PostgreSQL', className: 'text-blue-400 border-blue-400/30 bg-blue-400/10' },
+      { label: 'Amazon RDS', className: 'text-orange-400 border-orange-400/30 bg-orange-400/10', showOnMain: true },
+      { label: 'PostgreSQL', className: 'text-blue-400 border-blue-400/30 bg-blue-400/10', showOnMain: true },
       { label: 'MySQL', className: 'text-sky-400 border-sky-400/30 bg-sky-400/10' },
-      { label: 'SQL', className: 'text-red-400 border-red-400/30 bg-red-400/10' },
+      { label: 'MS SQL Server', className: 'text-red-500 border-red-500/30 bg-red-500/10' },
+      { label: 'Oracle DB', className: 'text-red-600 border-red-600/30 bg-red-600/10' },
+      { label: 'MongoDB', className: 'text-green-500 border-green-500/30 bg-green-500/10' },
+      { label: 'Snowflake', className: 'text-blue-300 border-blue-300/30 bg-blue-300/10' },
+      { label: 'BigQuery', className: 'text-blue-500 border-blue-500/30 bg-blue-500/10' },
+      { label: 'Redshift', className: 'text-purple-500 border-purple-500/30 bg-purple-500/10' },
+      { label: 'DynamoDB', className: 'text-blue-600 border-blue-600/30 bg-blue-600/10' },
+      { label: 'Cassandra', className: 'text-sky-600 border-sky-600/30 bg-sky-600/10' },
     ],
   },
   {
     id: 'sat-in-5',
     title: 'Enterprise Tools',
-    // description: 'Integrate with your team\'s productivity and support platforms.',
-    icon: 'solar:briefcase-linear',
+    icon: 'solar:case-minimalistic-linear',
     desktopPos: 'top-[8%] left-[10%] translate-x-0',
     tags: [
-      { label: 'Confluence', className: 'text-slate-300 border-slate-300/30 bg-slate-300/10' },
-      { label: 'Jira', className: 'text-blue-400 border-blue-400/30 bg-blue-400/10' },
+      { label: 'Confluence', className: 'text-slate-300 border-slate-300/30 bg-slate-300/10', showOnMain: true },
+      { label: 'Jira', className: 'text-blue-400 border-blue-400/30 bg-blue-400/10', showOnMain: true },
+      { label: 'Notion', className: 'text-white border-white/30 bg-white/10' },
+      { label: 'Salesforce', className: 'text-sky-400 border-sky-400/30 bg-sky-400/10' },
+      { label: 'ServiceNow', className: 'text-emerald-500 border-emerald-500/30 bg-emerald-500/10' },
+      { label: 'Zendesk', className: 'text-emerald-600 border-emerald-600/30 bg-emerald-600/10' },
       { label: 'HubSpot', className: 'text-orange-400 border-orange-400/30 bg-orange-400/10' },
+      { label: 'Slack', className: 'text-purple-500 border-purple-500/30 bg-purple-500/10' },
+      { label: 'GitHub / Bitbucket / GitLab', className: 'text-orange-500 border-orange-500/30 bg-orange-500/10' },
     ],
   },
 ];
@@ -111,7 +132,7 @@ const outputDestinations: KnowledgeHubNode[] = [
     id: 'sat-out-3',
     title: 'Logistics',
     description: 'Optimize routing, track shipments, and answer operational questions for field teams instantly.',
-    icon: 'solar:truck-linear',
+    icon: 'solar:delivery-linear',
     headerBg: 'bg-[#fef2f2]',
     headerColor: 'text-[#ef4444]',
     desktopPos: 'top-[80%] right-[15%] translate-x-0',
@@ -131,7 +152,7 @@ const outputDestinations: KnowledgeHubNode[] = [
     id: 'sat-out-5',
     title: 'Internal Tools',
     description: 'Build custom AI agents, dashboards, and automated workflows for your employees.',
-    icon: 'solar:terminal-linear',
+    icon: 'solar:code-square-linear',
     headerBg: 'bg-[#f1f5f9]',
     headerColor: 'text-[#64748b]',
     desktopPos: 'top-[90%] left-1/2 -translate-x-1/2',
@@ -143,6 +164,7 @@ const outputDestinations: KnowledgeHubNode[] = [
 const KnowledgeHub = () => {
   // State to manage lines drawing
   const [lines, setLines] = useState<{ x1: number; y1: number; x2: number; y2: number; id: string }[]>([]);
+  const [selectedNode, setSelectedNode] = useState<KnowledgeHubNode | null>(null);
   const containerRef = useRef<HTMLDivElement>(null);
   const hubIngestRef = useRef<HTMLDivElement>(null);
   const hubConnectRef = useRef<HTMLDivElement>(null);
@@ -313,9 +335,9 @@ const KnowledgeHub = () => {
                        flex flex-col items-center justify-center text-center mx-auto lg:mx-0
                        lg:animate-heartbeat"
         >
-            <h1 className="text-2xl font-extrabold text-white leading-none">
+            <div className="text-2xl font-extrabold text-white leading-none">
                 SparkVerse<br/><span className="text-primary">AI</span>
-            </h1>
+            </div>
             <div className="text-[0.65rem] uppercase tracking-widest font-bold text-slate-400 mt-1">
                 Knowledge Hub
             </div>
@@ -342,7 +364,7 @@ const KnowledgeHub = () => {
                     {node.description}
                 </p>
                 <div className="flex flex-wrap gap-1.5 mb-3">
-                    {node.tags.map((tag, i) => (
+                    {node.tags.filter(tag => tag.showOnMain).map((tag, i) => (
                         <span 
                             key={i} 
                             className={`flex items-center gap-1 text-[0.65rem] px-2 py-1 rounded-md border font-bold transition-all ${tag.className}`}
@@ -352,7 +374,10 @@ const KnowledgeHub = () => {
                         </span>
                     ))}
                 </div>
-                <button className="text-[0.7rem] font-bold text-primary flex items-center gap-1 mt-auto hover:text-white transition-colors">
+                <button 
+                  onClick={() => setSelectedNode(node)}
+                  className="text-[0.7rem] font-bold text-primary flex items-center gap-1 mt-auto hover:text-white transition-colors"
+                >
                     <IconifyIconClient icon="solar:eye-linear" className="w-3.5 h-3.5"/>
                     View all
                 </button>
@@ -371,9 +396,9 @@ const KnowledgeHub = () => {
                        flex flex-col items-center justify-center text-center mx-auto lg:mx-0
                        lg:animate-heartbeat"
         >
-            <h1 className="text-2xl font-extrabold text-white leading-none">
+            <div className="text-2xl font-extrabold text-white leading-none">
                 SparkVerse<br/><span className="text-primary">AI</span>
-            </h1>
+            </div>
             <div className="text-[0.65rem] uppercase tracking-widest font-bold text-primary bg-primary/10 px-2 py-1 rounded-full mt-1.5 border border-primary/20">
                 Intelligence Engine
             </div>
@@ -399,9 +424,94 @@ const KnowledgeHub = () => {
                 <p className="text-xs text-slate-400 mb-4 leading-relaxed">
                     {node.description}
                 </p>
+                <button 
+                  onClick={() => setSelectedNode(node)}
+                  className="text-[0.7rem] font-bold text-primary flex items-center gap-1 mt-auto hover:text-white transition-colors"
+                >
+                    <IconifyIconClient icon="solar:eye-linear" className="w-3.5 h-3.5"/>
+                    View all
+                </button>
             </div>
         ))}
       </div>
+
+      {/* Modal */}
+      {selectedNode && (
+        <div 
+          className="fixed inset-0 z-[100] flex items-center justify-center p-4 bg-dark/80 backdrop-blur-md transition-opacity duration-300 ease-in-out"
+          onClick={() => setSelectedNode(null)}
+        >
+          <div 
+            className="bg-dark border border-primary/30 rounded-3xl p-8 max-w-2xl w-full shadow-[0_0_50px_rgba(23,169,255,0.2)] relative transition-all duration-300 ease-out transform scale-100"
+            onClick={(e) => e.stopPropagation()}
+          >
+            <button 
+              onClick={() => setSelectedNode(null)}
+              className="absolute top-6 right-6 text-slate-400 hover:text-white transition-colors"
+            >
+              <IconifyIconClient icon="solar:close-circle-linear" className="w-8 h-8" />
+            </button>
+
+            <div className="flex items-center gap-4 mb-6">
+              <div className={`w-12 h-12 rounded-xl flex items-center justify-center ${selectedNode.headerBg || 'bg-primary/10'} ${selectedNode.headerColor || 'text-primary'}`}>
+                <IconifyIconClient icon={selectedNode.icon} className="w-8 h-8" />
+              </div>
+              <div>
+                <h3 className="text-2xl font-bold text-white">{selectedNode.title}</h3>
+                <p className="text-sm text-slate-400">Knowledge Network Component</p>
+              </div>
+            </div>
+
+            <p className="text-slate-300 mb-8 leading-relaxed">
+              {selectedNode.description || `Seamlessly integrate ${selectedNode.title} with the SparkVerse AI intelligence engine for automated data orchestration and insight generation.`}
+            </p>
+
+            {selectedNode.tags.length > 0 && (
+              <div>
+                <h4 className="text-sm font-bold text-slate-400 uppercase tracking-widest mb-4">Available Connectors</h4>
+                <div className="grid grid-cols-2 sm:grid-cols-3 gap-3">
+                  {selectedNode.tags.map((tag, i) => (
+                    <div 
+                      key={i} 
+                      className={`flex items-center gap-2 px-4 py-3 rounded-xl border font-bold text-sm transition-all ${tag.className}`}
+                    >
+                      <IconifyIconClient icon="solar:tag-linear" className="w-4 h-4 opacity-70"/>
+                      {tag.label}
+                    </div>
+                  ))}
+                  <div className="flex items-center justify-center gap-2 px-4 py-3 rounded-xl border border-dashed border-slate-700 text-slate-500 font-medium text-sm">
+                    + more coming
+                  </div>
+                </div>
+              </div>
+            )}
+
+            {!selectedNode.tags.length && (
+               <div>
+                  <h4 className="text-sm font-bold text-slate-400 uppercase tracking-widest mb-4">Industry Solutions</h4>
+                  {/* <p className="text-slate-400 text-sm">This module provides specialized AI-driven workflows tailored for {selectedNode.title} workloads, including predictive analytics and automated resource management.</p> */}
+                  <div className="mt-6 p-4 rounded-xl bg-primary/5 border border-primary/20 flex items-center gap-3">
+                     <IconifyIconClient icon="solar:info-circle-linear" className="w-6 h-6 text-primary" />
+                     <p className="text-xs text-primary/80">Configure this output in your dashboard to start streaming processed intelligence.</p>
+                  </div>
+               </div>
+            )}
+
+            <div className="mt-10 pt-6 border-t border-white/5 flex justify-end gap-4">
+              <button 
+                onClick={() => setSelectedNode(null)}
+                className="px-6 py-2.5 rounded-full font-bold text-slate-400 hover:text-white transition-colors"
+              >
+                Close
+              </button>
+              {/* <button className="bg-primary text-dark px-6 py-2.5 rounded-full font-bold hover:bg-white transition-all flex items-center gap-2">
+                Configure
+                <IconifyIconClient icon="solar:arrow-right-linear" className="w-4 h-4" />
+              </button> */}
+            </div>
+          </div>
+        </div>
+      )}
     </section>
   );
 };

@@ -91,18 +91,20 @@ const HowItWorks = () => {
             </div>
 
             <div className="relative">
-              <div className="absolute start-7.5 h-full w-0.5 bg-gradient-to-b from-primary/50 via-primary/10 to-transparent" />
               <div className="relative z-10">
                 {userStepsData.map((step, index) => (
                   <div
                     key={index}
-                    className="flex gap-5 flex-row mb-12.5"
+                    className="flex gap-5 flex-row mb-12.5 relative group"
                     data-aos="fade-up"
                     data-aos-duration={600}
                     data-aos-easing="ease-in-out"
                   >
-                    <div className="flex-shrink-0">
-                      <div className="size-16 bg-primary/10 border border-primary/30 rounded-full inline-flex items-center justify-center shadow-[0_0_20px_rgba(23,169,255,0.15)] transition-transform group-hover:scale-110">
+                    {index !== userStepsData.length - 1 && (
+                      <div className="absolute start-8 top-16 bottom-[-50px] w-0.5 bg-gradient-to-b from-primary/30 to-primary/10" />
+                    )}
+                    <div className="flex-shrink-0 relative z-10">
+                      <div className="size-16 bg-dark border border-primary/30 rounded-full inline-flex items-center justify-center shadow-[0_0_20px_rgba(23,169,255,0.15)] transition-transform group-hover:scale-110">
                         <h5 className="text-primary font-bold text-xl">{step.number}</h5>
                       </div>
                     </div>
