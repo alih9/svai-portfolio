@@ -121,7 +121,7 @@ export const navMenuData: NavItem[] = [
   {
     title: 'Home',
     type: 'link',
-    href: '/svai',
+    href: '/',
   },
   {
     title: 'Products',
