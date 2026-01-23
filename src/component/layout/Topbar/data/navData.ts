@@ -123,21 +123,21 @@ export const navMenuData: NavItem[] = [
     type: 'link',
     href: '/',
   },
-  {
-    title: 'Products',
-    type: 'link',
-    href: '/products',
-  },
+  // {
+  //   title: 'Products',
+  //   type: 'link',
+  //   href: '/products',
+  // },
   {
     title: 'Blogs',
     type: 'link',
     href: '/blog',
   },
 
-  {
-    title: 'Research',
-    type: 'link',
-    href: '/research',
-  },
+  // {
+  //   title: 'Research',
+  //   type: 'link',
+  //   href: '/research',
+  // },
 
 ];

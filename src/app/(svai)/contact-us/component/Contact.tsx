@@ -40,11 +40,11 @@ const Contact = () => {
           className="text-center md:mb-15 mb-10"
           data-aos="fade-up"
         >
-          <h2 className="mb-4 lg:text-6xl md:text-5xl text-4xl font-bold tracking-tight text-dark">
-            Contact <span className="text-primary">SparkVerse</span>
+             <h2 className="mb-4 lg:text-6xl md:text-5xl text-4xl font-bold tracking-tight text-dark">
+            Contact <span className="text-primary">SparkVerse AI</span>
           </h2>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-            Ready to transform your data into intelligence? We're here to help you navigate the future of AI.
+            Ready to transform your data into intelligence? <br/> We're here to help you navigate the future of AI.
           </p>
         </div>
 

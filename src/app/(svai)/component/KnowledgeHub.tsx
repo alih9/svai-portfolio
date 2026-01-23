@@ -256,7 +256,13 @@ const KnowledgeHub = () => {
   }, []);
 
   return (
-    <section className="relative w-full bg-dark overflow-hidden text-white font-sans py-32">
+    <section className="relative w-full bg-dark overflow-hidden text-white font-sans pt-10 pb-32">
+       
+       <div className="flex justify-center pb-8" >
+<h2 className="text-white lg:text-5.5xl md:text-5xl text-4xl mb-6 font-bold leading-tight">
+                 From Any Source to Intelligent Outcomes
+              </h2>
+              </div>
         {/* CSS Animations Styles */}
         <style dangerouslySetInnerHTML={{__html: `
             .bg-radial-custom {
