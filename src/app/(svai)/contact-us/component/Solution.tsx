@@ -64,13 +64,15 @@ const Solution = () => {
             data-aos-easing="ease-in-out"
           >
             <h2 className="mb-2.5 lg:text-5.5xl md:text-4.6xl text-3.4xl">
-              Try these helpful solutions{' '}
+             Build with Confidence. <br/>
+             Deploy with Control. <br/>
+             Operate with Trust. 
             </h2>
-            <p className="text-base mb-2.5">
+            {/* <p className="text-base mb-2.5">
               Departure defective arranging rapturous did believe him all had supported.{' '}
-            </p>
+            </p> */}
           </div>
-          <div className="grid md:grid-cols-3 lg:gap-7.5 gap-5 flex-col">
+          {/* <div className="grid md:grid-cols-3 lg:gap-7.5 gap-5 flex-col">
             {contactData.map((item, index) => (
               <div
                 key={index}
@@ -94,7 +96,7 @@ const Solution = () => {
                 </Link>
               </div>
             ))}
-          </div>
+          </div> */}
         </div>
       </section>
     </>

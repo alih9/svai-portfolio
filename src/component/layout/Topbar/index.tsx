@@ -53,7 +53,7 @@ const Topbar = () => {
             <div className="flex flex-row justify-center items-center md:gap-4 gap-2.5">
               <div className="md:flex hidden">
                 <Link
-                  href="/request-a-demo"
+                  href="/contact-us"
                   className="bg-primary text-dark hover:text-primary hover:bg-dark rounded-2xl px-7.5 py-3.5 font-medium transition-all duration-300"
                 >
                   Request a Demo

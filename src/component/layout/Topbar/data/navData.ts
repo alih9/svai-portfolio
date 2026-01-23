@@ -71,7 +71,7 @@ export interface NavItem {
 //           { label: 'Pricing 2 (Ecom)', href: '/pricing-2' },
 //           { label: 'Pricing 3', href: '/pricing-3' },
 //           { label: 'Integrations', href: '/integrations' },
-//           { label: 'Request a Demo', href: '/request-a-demo' },
+//           { label: 'Request a Demo', href: '/contact-us' },
 //         ],
 //       },
 //       {

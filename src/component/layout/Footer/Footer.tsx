@@ -14,7 +14,7 @@ const Footer = () => {
             <div className="lg:col-span-4 max-w-sm">
               <Link href="/">
                 <Image
-                  src="/Logos/PNG/FINAL LOGO-01.png"
+                  src="/Logos/SparkVerse-Logo-Footer.webp"
                   alt="SparkVerse AI Logo"
                   width={150}
                   height={55}

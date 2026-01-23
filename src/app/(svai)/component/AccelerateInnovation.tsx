@@ -36,7 +36,7 @@ const AccelerateInnovation = () => {
             </p>
             <div className="mt-5">
               <Link
-                href="/request-a-demo"
+                href="/contact-us"
                 className="py-4 lg:px-10 px-8 inline-flex items-center text-center bg-primary hover:bg-white font-bold rounded-2xl text-dark transition-all duration-300"
               >
                 Explore Generative AI → 

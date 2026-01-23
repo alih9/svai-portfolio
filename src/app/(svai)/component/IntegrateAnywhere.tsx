@@ -60,7 +60,7 @@ const IntegrateAnywhere = () => {
             data-aos-easing="ease-in-out"
           >
             <div className="bg-primary py-0.5 px-3.75 rounded-full font-medium text-sm inline-flex mb-2.5 text-dark">
-              Integrate Anywhere
+              Integrate Any Source
             </div>
             <h2 className="mb-2.5 lg:text-5.5xl md:text-4.6xl text-3.4xl">
               Enterprise-Ready Cloud Connectors 

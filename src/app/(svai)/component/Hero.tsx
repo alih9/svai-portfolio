@@ -1,7 +1,7 @@
 import React from 'react';
 // import Apple from '@/assets/images/logo/apple-store.svg';
 // import Play from '@/assets/images/logo/play-store.svg';
-import hero from '@/assets/images/svai/semantic-search.webp';
+import hero from '@/assets/images/svai/semantic-search.png';
 import Link from 'next/link';
 import Image from 'next/image';
 import IconifyIconClient from '@/component/IconifyIconClient';
@@ -55,7 +55,7 @@ const Hero = () => {
               {/* CTA */}
               <div className="flex md:gap-6 gap-4 md:flex-row flex-col items-center">
                 <Link
-                  href="/request-a-demo"
+                  href="/contact-us"
                   className="w-full md:w-auto py-4 md:px-10 px-8 inline-flex justify-center items-center text-center bg-white font-bold rounded-2xl text-dark transition-all duration-300 hover:bg-primary hover:text-dark shadow-xl shadow-primary/5"
                 >
                   Get a Demo

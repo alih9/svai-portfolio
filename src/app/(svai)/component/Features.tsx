@@ -5,13 +5,13 @@ import Link from 'next/link';
 import IconifyIconClient from '@/component/IconifyIconClient';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation } from 'swiper/modules';
-import ZeroTrust from '@/assets/images/svai/visualization/Zero-Trust Architecture.png';
-import Fine from '@/assets/images/svai/visualization/Fine-Grained Access Control.png';
-import Security from '@/assets/images/svai/visualization/Security by Design.png';
-import Academic from '@/assets/images/svai/visualization/Academic & Research Affiliation.png';
-import Deployment from '@/assets/images/svai/visualization/Flexible, Privacy-First Deployment.png';
-import Encryption from '@/assets/images/svai/visualization/Encryption.png';
-import Compliance from '@/assets/images/svai/visualization/Global Compliance Ready.png';
+import Academic from '@/assets/images/svai/Security/Academic-and-Research-Affiliation.webp';
+import Fine from '@/assets/images/svai/Security/Fine-Grained-Access-Control.webp';
+import Compliance from '@/assets/images/svai/Security/Global-Compliance-Ready.webp';
+import Deployment from '@/assets/images/svai/Security/Privacy-First-Deployment.webp';
+import Security from '@/assets/images/svai/Security/Security-by-Design.webp';
+import Encryption from '@/assets/images/svai/Security/Encryption.webp';
+import ZeroTrust from '@/assets/images/svai/Security/Zero-Trust-Architecture.webp';
 
 const Features = () => {
   type sliderType = {
@@ -117,11 +117,11 @@ const Features = () => {
             <div className="swiper-wrapper">
               {sliderData.map((item, idx) => (
                 <SwiperSlide key={idx}>
-                  <div className="grid md:grid-cols-6 md:gap-8 gap-5 items-center">
-                    <div className="md:col-span-1">
+                  <div className="grid md:grid-cols-6 md:gap-8 gap-5 items-start">
+                    <div className="col-span-2">
                       <Image src={item.image} alt={item.title} className="w-full h-auto rounded-xl shadow-md" />
                     </div>
-                    <div className="flex gap-3 flex-col md:col-span-4">
+                    <div className="col-span-4 flex gap-3 flex-col">
                       <div className="text-2xl">{item.title} </div>
                       <p className="mb-7.5 text-lg text-black">{item.des} </p>
                       <Link

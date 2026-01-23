@@ -3,6 +3,7 @@ import Contact from './component/Contact';
 import Solution from './component/Solution';
 
 import { Metadata } from 'next';
+import AccelerateInnovation from '../component/AccelerateInnovation';
 
 export const metadata: Metadata = {
   title: 'Contact Us | SparkVerseAI',
@@ -17,6 +18,8 @@ const Page = () => {
     <>
       <Contact />
       <Solution />
+      <AccelerateInnovation />
+
     </>
   );
 };
