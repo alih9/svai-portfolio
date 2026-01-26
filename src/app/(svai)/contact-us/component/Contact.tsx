@@ -129,7 +129,33 @@ const Contact = () => {
             
             
             
-  <form onSubmit={handleSubmit} className="space-y-6">
+            
+            {message && (
+              <div 
+                className={`mb-8 p-6 rounded-2xl flex items-start gap-4 animate-fade-in ${
+                  message.type === 'success' 
+                    ? 'bg-green-500/10 border border-green-500/20 text-green-700' 
+                    : 'bg-red-500/10 border border-red-500/20 text-red-700'
+                }`}
+              >
+                <div className={`mt-0.5 w-10 h-10 rounded-xl flex items-center justify-center flex-shrink-0 ${
+                  message.type === 'success' ? 'bg-green-500/20 text-green-600' : 'bg-red-500/20 text-red-600'
+                }`}>
+                  <Icon 
+                    icon={message.type === 'success' ? "lucide:check-circle" : "lucide:alert-circle"} 
+                    className="text-2xl" 
+                  />
+                </div>
+                <div>
+                  <h4 className="font-bold mb-1">
+                    {message.type === 'success' ? 'Message Sent!' : 'Submission Error'}
+                  </h4>
+                  <p className="text-sm opacity-90">{message.text}</p>
+                </div>
+              </div>
+            )}
+
+            <form onSubmit={handleSubmit} className="space-y-6">
                <div className="mb-5">
                  <label htmlFor="name" className="mb-1.25 block font-normal">
                    Full Name 
