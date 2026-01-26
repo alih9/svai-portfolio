@@ -2,14 +2,26 @@
 'use client';
 
 import Link from 'next/link';
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { submitContactForm } from '../actions';
-import { countries } from '@/utils/countries';
 import { Icon } from '@iconify/react';
+import CountryDropdown from '@/component/ui/CountryDropdown';
 
 const Contact = () => {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [message, setMessage] = useState<{ type: 'success' | 'error'; text: string } | null>(null);
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    role: '',
+    message: '',
+    country: ''
+  });
+
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    const { name, value } = e.target;
+    setFormData(prev => ({ ...prev, [name]: value }));
+  };
 
   const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
@@ -24,6 +36,7 @@ const Contact = () => {
       setMessage({ type: 'error', text: result.error });
     } else {
       setMessage({ type: 'success', text: 'Thank you! Your request has been submitted.' });
+      setFormData({ name: '', email: '', role: '', message: '' ,country:''});
       (event.target as HTMLFormElement).reset();
       
       // Reset Preline select if possible
@@ -125,7 +138,8 @@ const Contact = () => {
                    className="bg-white rounded-2xl py-2.5 px-5 border border-neutral-200 w-full h-14 "
                    maxLength={256}
                    name="name"
-                   data-name="Name"
+                   value={formData.name}
+                   onChange={handleInputChange}
                    placeholder="John Deo"
                    type="text"
                    id="name"
@@ -139,7 +153,8 @@ const Contact = () => {
                    className="bg-white rounded-2xl py-2.5 px-5 border border-neutral-200 w-full h-14"
                    maxLength={256}
                    name="email"
-                   data-name="Email"
+                   value={formData.email}
+                   onChange={handleInputChange}
                    placeholder="Used only to respond to your request"
                    type="email"
                    id="email"
@@ -147,48 +162,31 @@ const Contact = () => {
                  />
                </div>
                <div className="mb-5 flex gap-5 lg:flex-row flex-col">
-                 <div>
+                <div className="w-full">
                    <label htmlFor="role" className="mb-1.25 block font-normal">
                      Your Role 
                    </label>
                    <input
                      className="bg-white rounded-2xl py-2.5 px-5 border border-neutral-200 w-full h-14"
                      name="role"
-                     data-name="Role"
+                     value={formData.role}
+                     onChange={handleInputChange}
                        placeholder="CTO, IT Lead..."
                      type="text"
                      id="role"
                    />
                  </div>
-                 <div>
+                 <div className="w-full">
                    <label htmlFor="country" className="mb-1.25 block font-normal">
                      Country
                    </label>
-                  
-                   <select
-                       name="country"
-                       id="country"
-                       className="hidden"
-                       data-hs-select='{
-                         "hasSearch": true,
-                         "searchPlaceholder": "Search country...",
-                         "searchClasses": "block w-full text-sm border-gray-200 rounded-lg focus:border-primary focus:ring-primary py-2 px-3 outline-none",
-                         "searchWrapperClasses": "bg-white p-2 sticky top-0 border-b border-gray-100",
-                         "placeholder": "Select country...",
-                         "toggleTag": "<button type=\"button\" aria-expanded=\"false\"></button>",
-                         "toggleClasses": "hs-select-disabled:pointer-events-none hs-select-disabled:opacity-50 relative py-4 px-5 pe-12 flex text-nowrap w-full cursor-pointer bg-gray-50 border border-gray-200 rounded-2xl text-start text-sm focus:border-primary focus:ring-primary focus:bg-white transition-all text-gray-500",
-                         "dropdownClasses": "mt-2 max-h-72 pb-1 px-1 space-y-0.5 z-50 w-full bg-white border border-gray-200 rounded-2xl shadow-2xl overflow-hidden overflow-y-auto [&::-webkit-scrollbar]:w-2 [&::-webkit-scrollbar-thumb]:rounded-full [&::-webkit-scrollbar-track]:bg-gray-100 [&::-webkit-scrollbar-thumb]:bg-gray-300",
-                         "optionClasses": "py-2 px-4 w-full text-sm text-gray-800 cursor-pointer hover:bg-gray-100 rounded-xl focus:outline-none focus:bg-gray-100",
-                         "optionTemplate": "<div class=\"flex justify-between items-center w-full\"><span>[DATA-TITLE]</span><span class=\"hidden hs-selected:block\"><svg class=\"flex-shrink-0 size-3.5 text-primary\" xmlns=\"http:www.w3.org/2000/svg\" width=\"24\" height=\"24\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><polyline points=\"20 6 9 17 4 12\"/></svg></span></div>"
-                       }'
-                     >
-                       <option value="">Select country</option>
-                       {countries.map((country) => (
-                         <option key={country} value={country}>
-                           {country}
-                         </option>
-                       ))}
-                     </select>
+                  <CountryDropdown 
+                  name="country"
+                   value={formData.country}
+                   onChange={(val) => setFormData(prev => ({ ...prev, country: val }))}
+              placeholder="Search or select..."
+            />
+                 
                     
                  </div>
                </div>
@@ -199,10 +197,10 @@ const Contact = () => {
                  <textarea
                    className="bg-white rounded-2xl py-2.5 px-5 border border-neutral-200 w-full h-50"
                    name="message"
+                   value={formData.message}
+                   onChange={handleInputChange}
                    maxLength={5000}
-                   data-name="Message"
                    placeholder="Short message about your use case, questions or goals"
-                   defaultValue={''}
                  />
                 
 

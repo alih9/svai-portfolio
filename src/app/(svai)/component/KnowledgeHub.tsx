@@ -2,6 +2,7 @@
 
 import React, { useEffect, useRef, useState } from 'react';
 import IconifyIconClient from '@/component/IconifyIconClient';
+import useIsMobile from '@/utils/useIsMobile';
 
 /**
  * Type Definitions
@@ -169,6 +170,7 @@ const KnowledgeHub = () => {
   const hubIngestRef = useRef<HTMLDivElement>(null);
   const hubConnectRef = useRef<HTMLDivElement>(null);
 
+const isMobile = useIsMobile();
   // Helper to calculate center of element relative to container
   const getRelativeCenter = (el: HTMLElement, container: HTMLElement) => {
     const elRect = el.getBoundingClientRect();
@@ -254,12 +256,11 @@ const KnowledgeHub = () => {
         window.removeEventListener('resize', handleResize);
     };
   }, []);
-
   return (
-    <section className="relative w-full bg-dark overflow-hidden text-white font-sans pt-10 pb-32">
+    <section className="relative w-full bg-dark overflow-hidden text-white font-sans pt-10 pb-16 md:pb-32">
        
-       <div className="flex justify-center pb-8" >
-<h2 className="text-white lg:text-5.5xl md:text-5xl text-4xl mb-6 font-bold leading-tight">
+       <div className="flex justify-center items-center pb-8 px-4" >
+<h2 className="text-white lg:text-5.5xl md:text-4xl text-3xl mb-6 font-bold leading-tight z-100 self-center w-full text-center">
                  From Any Source to Intelligent Outcomes
               </h2>
               </div>
@@ -297,10 +298,9 @@ const KnowledgeHub = () => {
 
       <div className="absolute inset-0 bg-radial-custom pointer-events-none" />
 
-      {/* Main Container - Relative for absolute positioning of children */}
       <div 
         ref={containerRef} 
-        className="relative container mx-auto px-4 lg:h-[1000px] flex flex-col lg:block gap-8"
+        className="relative container mx-auto px-4 lg:h-[1000px] flex flex-col items-center lg:block gap-8"
       >
         
         {/* SVG Layer for lines (Desktop only usually, or handled responsively) */}
@@ -356,7 +356,8 @@ const KnowledgeHub = () => {
                 id={node.id}
                 className={`
                     relative z-10 bg-white/5 backdrop-blur-md border border-white/10 rounded-2xl p-5 shadow-2xl
-                    w-full lg:w-[280px] lg:absolute ${node.desktopPos}
+                    w-full max-w-md lg:max-w-none lg:w-[280px] lg:absolute 
+                    ${!isMobile ? node.desktopPos : node.desktopPos.split(' ').map(cls => `lg:${cls}`).join(' ')}
                     cursor-pointer transition-all duration-300 hover:scale-[1.03] hover:shadow-primary/20 hover:border-primary/50 hover:z-20
                 `}
             >
@@ -417,7 +418,8 @@ const KnowledgeHub = () => {
                 id={node.id}
                 className={`
                     relative z-10 bg-white/5 backdrop-blur-md border border-white/10 rounded-2xl p-5 shadow-2xl
-                    w-full lg:w-[280px] lg:absolute ${node.desktopPos}
+                    w-full max-w-md lg:max-w-none lg:w-[280px] lg:absolute 
+                   ${!isMobile ? node.desktopPos : node.desktopPos.split(' ').map(cls => `lg:${cls}`).join(' ')}
                     cursor-pointer transition-all duration-300 hover:scale-[1.03] hover:shadow-primary/20 hover:border-primary/50 hover:z-20
                 `}
             >

@@ -17,17 +17,17 @@ export const mobileMenuData: MenuItem[] = [
       { label: 'SVAI', href: '/svai' },
     ],
   },
-  {
-    title: 'Products',
-    children: [
-      {
-        label: 'Products',
-        href: '/products',
-        icon: 'tabler:carambola',
-        description: 'Quick, easy setup.',
-      },
-    ],
-  },
+  // {
+  //   title: 'Products',
+  //   children: [
+  //     {
+  //       label: 'Products',
+  //       href: '/products',
+  //       icon: 'tabler:carambola',
+  //       description: 'Quick, easy setup.',
+  //     },
+  //   ],
+  // },
   {
     title: 'Blogs',
     children: [
@@ -39,17 +39,17 @@ export const mobileMenuData: MenuItem[] = [
       },
     ],
   },
-  {
-    title: 'Research',
-    children: [
-      {
-        label: 'Research',
-        href: '/research',
-        icon: 'tabler:carambola',
-        description: 'Quick, easy setup.',
-      },
-    ],
-  },
+  // {
+  //   title: 'Research',
+  //   children: [
+  //     {
+  //       label: 'Research',
+  //       href: '/research',
+  //       icon: 'tabler:carambola',
+  //       description: 'Quick, easy setup.',
+  //     },
+  //   ],
+  // },
 
 ];
 
