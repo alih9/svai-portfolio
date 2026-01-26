@@ -15,10 +15,16 @@ export async function joinWaitlist(formData: FormData) {
   ]);
 
   if (error) {
+    console.error('Waitlist submission error detail:', {
+      message: error.message,
+      code: error.code,
+      details: error.details,
+      hint: error.hint
+    });
+    
     if (error.code === '23505') {
       return { error: 'This email is already on the waitlist.' };
     }
-    console.error('Error joining waitlist:', error);
     return { error: 'Failed to join waitlist. Please try again.' };
   }
 

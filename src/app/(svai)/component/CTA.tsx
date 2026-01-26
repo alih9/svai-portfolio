@@ -6,6 +6,7 @@ import { Icon } from '@iconify/react';
 
 const CTA = () => {
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const [email, setEmail] = useState('');
   const [message, setMessage] = useState<{ type: 'success' | 'error'; text: string } | null>(null);
 
   const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
@@ -13,7 +14,9 @@ const CTA = () => {
     setIsSubmitting(true);
     setMessage(null);
 
-    const formData = new FormData(event.currentTarget);
+    const formData = new FormData();
+    formData.append('email', email);
+    
     const result = await joinWaitlist(formData);
 
     setIsSubmitting(false);
@@ -21,7 +24,7 @@ const CTA = () => {
       setMessage({ type: 'error', text: result.error });
     } else {
       setMessage({ type: 'success', text: 'Thank you! You have been added to the waitlist.' });
-      (event.target as HTMLFormElement).reset();
+      setEmail('');
     }
   };
 
@@ -54,6 +57,8 @@ const CTA = () => {
                     <input
                       type="email"
                       name="email"
+                      value={email}
+                      onChange={(e) => setEmail(e.target.value)}
                       className="w-full h-14 py-2.5 px-6 rounded-2xl bg-white/5 border border-white/10 text-white placeholder:text-white/30 focus:outline-none focus:border-primary/50 transition-colors"
                       placeholder="info@example.com"
                       required
