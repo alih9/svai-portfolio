@@ -20,7 +20,7 @@ export interface NavItem {
 
 // export const navMenuData: NavItem[] = [
 //   {
-//     title: 'SparkVerseAI',
+//     title: 'SparkVerse AI',
 //     type: 'link',
 //     href: '/svai',
 //   },

@@ -28,7 +28,7 @@ const contactData: ContactCard[] = [
   },
   {
     icon: 'solar:chart-square-linear',
-    title: 'Discover SparkVerseAI tutorials',
+    title: 'Discover SparkVerse AI tutorials',
     description: 'Watch and learn from market experts how to utilize our product effectively.',
     linkLabel: 'Watch tutorials',
     linkUrl: '#',

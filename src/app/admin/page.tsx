@@ -2,6 +2,7 @@
 import { createClient } from '@/utils/supabase/server';
 import { redirect } from 'next/navigation';
 import Link from 'next/link';
+import BlogTableActions from './blog/components/BlogTableActions';
 
 export default async function AdminDashboard() {
   const supabase = await createClient();
@@ -59,8 +60,7 @@ export default async function AdminDashboard() {
                             </td>
                             <td className="px-6 py-4 text-gray-500">{new Date(blog.created_at).toLocaleDateString()}</td>
                             <td className="px-6 py-4 text-right">
-                                <Link href={`/admin/blog/edit/${blog.id}`} className="text-blue-600 hover:text-blue-800 mr-4 font-medium">Edit</Link>
-                                {/* Delete logic would go here, maybe a client component for the row to handle delete */}
+                                <BlogTableActions blogId={blog.id} />
                             </td>
                         </tr>
                     ))}

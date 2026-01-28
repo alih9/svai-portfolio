@@ -14,34 +14,34 @@ const inter = Inter({
 export const metadata: Metadata = {
   metadataBase: new URL('https://www.sparkverse.ai'),
   title: {
-    default: 'SparkVerseAI - Intelligent Knowledge Hub',
-    template: '%s | SparkVerseAI',
+    default: 'SparkVerse AI - Intelligent Knowledge Hub',
+    template: '%s | SparkVerse AI',
   },
   description:
-    'SparkVerseAI — privacy-first semantic search and intelligent experiences for modern commerce. Turn fragmented data into intelligent action.',
+    'SparkVerse AI — privacy-first semantic search and intelligent experiences for modern commerce. Turn fragmented data into intelligent action.',
   keywords:
-    'SparkVerseAI, semantic search, ecommerce search, recommendations, personalization, analytics, privacy-first, hybrid deployments, AI agents, knowledge hub',
+    'SparkVerse AI, semantic search, ecommerce search, recommendations, personalization, analytics, privacy-first, hybrid deployments, AI agents, knowledge hub',
   openGraph: {
     type: 'website',
     locale: 'en_US',
-    siteName: 'SparkVerseAI',
-    title: 'SparkVerseAI - Intelligent Knowledge Hub',
+    siteName: 'SparkVerse AI',
+    title: 'SparkVerse AI - Intelligent Knowledge Hub',
     description: 'Privacy-first semantic search and intelligent experiences for modern commerce.',
     images: [
       {
         url: '/Logos/PNG/FINAL LOGO-02.png', // Ideally should be a larger specialized OG image
         width: 1200,
         height: 630,
-        alt: 'SparkVerseAI Logo',
+        alt: 'SparkVerse AI Logo',
       },
     ],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'SparkVerseAI - Intelligent Knowledge Hub',
+    title: 'SparkVerse AI - Intelligent Knowledge Hub',
     description: 'Privacy-first semantic search and intelligent experiences for modern commerce.',
     images: ['/Logos/PNG/FINAL LOGO-02.png'],
-    creator: '@sparkverseai', // Placeholder, verify if exists
+    creator: '@SparkVerse AI', // Placeholder, verify if exists
   },
   robots: {
     index: true,

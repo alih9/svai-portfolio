@@ -25,7 +25,7 @@ export async function generateMetadata({ params }: Props) {
   const supabase = createStaticClient();
   const { data: blog } = await supabase
     .from('blogs')
-    .select('title, description, keywords, image_url, created_at, updated_at, author') // Added date fields if available, verified schema earlier had created_at
+    .select('title, description, keywords, image_url, created_at')
     .eq('slug', slug)
     .single();
 
@@ -39,7 +39,7 @@ export async function generateMetadata({ params }: Props) {
   const ogImage = blog.image_url || '/Logos/PNG/FINAL LOGO-02.png';
 
   return {
-    title: `${blog.title} | SparkVerseAI`,
+    title: `${blog.title}`,
     description: blog.description,
     keywords: blog.keywords ? blog.keywords.split(',').map((k: string) => k.trim()) : [],
     alternates: {
@@ -51,7 +51,6 @@ export async function generateMetadata({ params }: Props) {
       title: blog.title,
       description: blog.description,
       publishedTime: blog.created_at,
-      modifiedTime: blog.updated_at || blog.created_at,
       images: [
         {
           url: ogImage,
@@ -107,11 +106,11 @@ const BlogDetailsPage = async ({ params }: Props) => {
         dateModified: blog.updated_at || blog.created_at,
         author: {
           '@type': 'Person',
-          name: blog.author || 'SparkVerseAI Team',
+          name: blog.author || 'SparkVerse AI Team',
         },
         publisher: {
           '@type': 'Organization',
-          name: 'SparkVerseAI',
+          name: 'SparkVerse AI',
           logo: {
             '@type': 'ImageObject',
             url: 'https://www.sparkverse.ai/Logos/PNG/FINAL%20LOGO-02.png',
@@ -211,7 +210,7 @@ const BlogDetailsPage = async ({ params }: Props) => {
                  </div>
                  <div>
                      <p className="text-sm font-bold text-dark uppercase tracking-wider mb-1">Written By</p>
-                     <h4 className="text-xl font-heading font-bold text-black">{blog.author || 'SparkVerseAI Team'}</h4>
+                     <h4 className="text-xl font-heading font-bold text-black">{blog.author || 'SparkVerse AI Team'}</h4>
                  </div>
              </div>
 
@@ -281,7 +280,7 @@ const BlogDetailsPage = async ({ params }: Props) => {
                   href="/blog" 
                   className="inline-flex items-center justify-center px-8 py-3 text-base font-bold text-white transition-all duration-300 bg-primary rounded-full hover:bg-dark hover:shadow-lg focus:outline-none"
               >
-                  Explore All Insights
+                  Explore All
               </Link>
           </div>
       </section>

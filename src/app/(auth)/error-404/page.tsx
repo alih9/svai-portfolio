@@ -3,7 +3,7 @@ import React from 'react';
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Error 404 | SparkVerseAI',
+  title: 'Error 404 | SparkVerse AI',
 };
 
 const Page = () => {

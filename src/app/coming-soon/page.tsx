@@ -3,7 +3,7 @@ import ComingSoon from './ComingSoon';
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Coming Soon | SparkVerseAI',
+  title: 'Coming Soon | SparkVerse AI',
 };
 
 const Page = () => {

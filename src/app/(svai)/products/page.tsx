@@ -10,8 +10,8 @@ import Highlight from './component/Highlight';
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'AI-Powered Commerce Search & Recommendations | SparkVerseAI',
-  description: 'Explore SparkVerseAI’s intelligent commerce solutions, featuring privacy-first semantic search, AI-driven recommendations, and customizable AI agents.',
+  title: 'AI-Powered Commerce Search & Recommendations | SparkVerse AI',
+  description: 'Explore SparkVerse AI’s intelligent commerce solutions, featuring privacy-first semantic search, AI-driven recommendations, and customizable AI agents.',
   alternates: {
     canonical: 'https://www.sparkverse.ai/products',
   },

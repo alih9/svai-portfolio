@@ -5,7 +5,7 @@ import { currentYear } from '@/component/CurrentYear';
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Sign Up | SparkVerseAI',
+  title: 'Sign Up | SparkVerse AI',
 };
 
 const Page = () => {
@@ -21,7 +21,7 @@ const Page = () => {
         >
           <div className="lg:mb-12.5 md:mb-10 mb-7.5 text-center">
             <h1 className="lg:text-6xl md:text-5.5xl text-4xl">Sign up </h1>
-            <p className="mb-2.5">Create an account and start using SparkVerseAI. </p>
+            <p className="mb-2.5">Create an account and start using SparkVerse AI. </p>
           </div>
           <div className="bg-body-bg md:p-10 p-5 rounded-2xl">
             <form action="" className="mb-3.75">

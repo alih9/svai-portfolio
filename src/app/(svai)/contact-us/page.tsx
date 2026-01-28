@@ -6,8 +6,8 @@ import { Metadata } from 'next';
 import AccelerateInnovation from '../component/AccelerateInnovation';
 
 export const metadata: Metadata = {
-  title: 'Contact Us | SparkVerseAI',
-  description: 'Get in touch with the SparkVerseAI team to discuss your intelligent commerce needs or request a custom demo of our AI platform.',
+  title: 'Contact Us | SparkVerse AI',
+  description: 'Get in touch with the SparkVerse AI team to discuss your intelligent commerce needs or request a custom demo of our AI platform.',
   alternates: {
     canonical: 'https://www.sparkverse.ai/contact-us',
   },

@@ -5,7 +5,7 @@ import { currentYear } from '@/component/CurrentYear';
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Update Password | SparkVerseAI',
+  title: 'Update Password | SparkVerse AI',
 };
 
 const Page = () => {

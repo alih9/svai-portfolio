@@ -7,8 +7,8 @@ import Statistics3 from './component/Statistics3';
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'AI & Machine Learning Research | SparkVerseAI',
-  description: 'Discover the research and engineering behind SparkVerseAI, from semantic data models to high-performance AI deployment strategies.',
+  title: 'AI & Machine Learning Research | SparkVerse AI',
+  description: 'Discover the research and engineering behind SparkVerse AI, from semantic data models to high-performance AI deployment strategies.',
   alternates: {
     canonical: 'https://www.sparkverse.ai/research',
   },

@@ -83,7 +83,7 @@ const HowItWorks = () => {
                 </div>
               </div>
               <div className="flex mt-7.5 gap-2.5 md:flex-row flex-col">
-                <p className="text-white">Ready to experience the full power of SparkVerseAI?</p>
+                <p className="text-white">Ready to experience the full power of SparkVerse AI?</p>
                 <Link href="/pricing-2" className="inline-flex text-white underline">
                   <div>Learn more</div>
                 </Link>

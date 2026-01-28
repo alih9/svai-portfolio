@@ -2,10 +2,10 @@
 'use client';
 
 import { createClient } from '@/utils/supabase/client';
-import { useRouter } from 'next/navigation';
 import { useState, ChangeEvent } from 'react';
 import Image from 'next/image';
 import LexicalEditorWrapper from './LexicalEditorWrapper';
+import { useRouter } from 'next/navigation';
 
 type BlogFormProps = {
   initialData?: {
@@ -78,13 +78,13 @@ export default function BlogForm({ initialData }: BlogFormProps) {
         .getPublicUrl(filePath);
 
       setFormData((prev) => ({ ...prev, image_url: data.publicUrl }));
-    } catch (error: any) {
+    } catch (err: unknown) {
+      const error = err as Error;
       setError(error.message);
     } finally {
       setUploading(false);
     }
   };
-
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setLoading(true);
@@ -126,13 +126,8 @@ export default function BlogForm({ initialData }: BlogFormProps) {
 
   return (
 
-      <form onSubmit={handleSubmit} className="space-y-6  mx-auto bg-white p-8 rounded-2xl shadow-sm border border-gray-100 font-body">
-        {error && (
-            <div className="bg-red-50 text-red-600 p-4 rounded-lg">
-                {error}
-            </div>
-        )}
-
+      <form onSubmit={handleSubmit} className="space-y-6  mx-auto bg-white p-8 rounded-2xl shadow-sm border border-gray-100 font-body relative">
+       
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           <div>
             <label className="block text-sm font-semibold text-dark mb-2">Title</label>
