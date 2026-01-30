@@ -204,9 +204,12 @@ const BlogDetailsPage = async ({ params }: Props) => {
              {/* Author Section */}
              <div className="mt-12 py-8 border-y border-gray-100 flex items-center gap-6">
                  <div className="size-16 rounded-full bg-primary/10 flex items-center justify-center overflow-hidden">
-                     <div className="text-primary font-bold text-xl">
-                         {blog.author ? blog.author.charAt(0) : 'S'}
-                     </div>
+                     <Image
+                        src="/Logos/FINAL LOGO-02.jpg"
+                        alt="SparkVerse AI Logo"
+                        width={200}
+                        height={200}
+                      />
                  </div>
                  <div>
                      <p className="text-sm font-bold text-dark uppercase tracking-wider mb-1">Written By</p>

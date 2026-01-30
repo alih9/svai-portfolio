@@ -1,10 +1,10 @@
-
 'use client';
-
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { Icon } from '@iconify/react';
 import { useState } from 'react';
+import Image from 'next/image';
+
 
 export default function AdminSidebar() {
   const pathname = usePathname();
@@ -46,10 +46,14 @@ export default function AdminSidebar() {
       `}>
         <div className="h-16 flex items-center px-6 border-b border-gray-800/50">
            <Link href="/" className="flex items-center gap-2 group">
-               <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-primary to-blue-600 flex items-center justify-center text-white font-bold text-lg group-hover:scale-105 transition-transform">
-                  S
-               </div>
-               <span className="font-heading font-bold text-xl tracking-tight text-white group-hover:text-primary transition-colors">SparkVerse</span>
+            
+                   <Image
+                             src="/Logos/SparkVerse-Logo-Footer.webp"
+                             alt="SparkVerse AI Logo"
+                             width={100}
+                             height={40}
+                             className="h-12 w-auto my-16"
+                           />
            </Link>
         </div>
 
