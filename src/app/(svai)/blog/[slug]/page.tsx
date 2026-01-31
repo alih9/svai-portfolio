@@ -1,5 +1,6 @@
 
 import React from 'react';
+import '../blog-content.css';
 import {  createStaticClient } from '@/utils/supabase/server';
 import { notFound } from 'next/navigation';
 import Image from 'next/image';
