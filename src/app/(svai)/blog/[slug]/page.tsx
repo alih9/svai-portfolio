@@ -6,6 +6,7 @@ import { notFound } from 'next/navigation';
 import Image from 'next/image';
 import Link from 'next/link';
 import { format } from 'date-fns';
+import CTA from '../../component/CTA';
 
 export async function generateStaticParams() {
   const supabase = createStaticClient();
@@ -278,7 +279,7 @@ const BlogDetailsPage = async ({ params }: Props) => {
       )}
 
       {/* Footer Navigation */}
-      <section className="bg-white pb-20">
+      <section className="bg-white">
           <div className="container text-center">
               <Link 
                   href="/blog" 
@@ -288,6 +289,8 @@ const BlogDetailsPage = async ({ params }: Props) => {
               </Link>
           </div>
       </section>
+
+      <CTA />
     </>
   );
 };
